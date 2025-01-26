@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>Corporacion de Sistemas Informaticos  Corsinf SAS</razonSocial>
+    <nombreComercial>Corsinf </nombreComercial>
+    <ruc>1793211628001</ruc>
+    <claveAcceso>3005202401179321162800120010010000000571234567812</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>001</ptoEmi>
+    <secuencial>000000057</secuencial>
+    <dirMatriz>De Los Motilones N40345 y Miguel Albornoz</dirMatriz>
+    <contribuyenteRimpe>CONTRIBUYENTE RÉGIMEN RIMPE</contribuyenteRimpe>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>30/05/2024</fechaEmision>
+    <dirEstablecimiento>Direccion Cesar Davila N10222</dirEstablecimiento>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>CONGREGACIONN HERMANAS DOMINICAS</razonSocialComprador>
+    <identificacionComprador>1791906810001</identificacionComprador>
+    <totalSinImpuestos>1151.44</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>0</codigoPorcentaje>
+        <descuentoAdicional>0</descuentoAdicional>
+        <baseImponible>0.00</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>4</codigoPorcentaje>
+        <descuentoAdicional>0.00</descuentoAdicional>
+        <baseImponible>1151.44</baseImponible>
+        <tarifa>15.00</tarifa>
+        <valor>172.72</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>1324.16</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>20</formaPago>
+        <total>1324.16</total>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>226</codigoPrincipal>
+      <descripcion>COP. DELL OPTIPLEX AIO 7410</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>1151.440000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>1151.44</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>1151.44</baseImponible>
+          <valor>172.72</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="Ubicacion">0</campoAdicional>
+    <campoAdicional nombre="Direccion">Direccion Cesar Davila N10222</campoAdicional>
+    <campoAdicional nombre="Telefono">3959960</campoAdicional>
+    <campoAdicional nombre="Email">msosa@saintdominic.edu.ec</campoAdicional>
+    <campoAdicional nombre="Email2">msosa@saintdominic.edu.ec</campoAdicional>
+    <campoAdicional nombre="Referencia">99999999</campoAdicional>
+  </infoAdicional>
+</factura>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>Corporacion de Sistemas Informaticos  Corsinf SAS</razonSocial>
+    <nombreComercial>Corsinf </nombreComercial>
+    <ruc>1793211628001</ruc>
+    <claveAcceso>1502202401179321162800120010010000000231234567813</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>001</ptoEmi>
+    <secuencial>000000023</secuencial>
+    <dirMatriz>De Los Motilones N40345 y Miguel Albornoz</dirMatriz>
+    <contribuyenteRimpe>CONTRIBUYENTE RÉGIMEN RIMPE</contribuyenteRimpe>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>15/02/2024</fechaEmision>
+    <dirEstablecimiento>Direccion Cesar Davila N10222</dirEstablecimiento>
+    <obligadoContabilidad>NO</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>CONGREGACIONN HERMANAS DOMINICAS</razonSocialComprador>
+    <identificacionComprador>1791906810001</identificacionComprador>
+    <totalSinImpuestos>29352.16</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>0</codigoPorcentaje>
+        <descuentoAdicional>0</descuentoAdicional>
+        <baseImponible>0.00</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>2</codigoPorcentaje>
+        <descuentoAdicional>0.00</descuentoAdicional>
+        <baseImponible>29352.16</baseImponible>
+        <tarifa>12.00</tarifa>
+        <valor>3522.28</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>32874.44</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>20</formaPago>
+        <total>32874.44</total>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>UPS</codigoPrincipal>
+      <descripcion>UPS 3000VA  2400W</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>7</cantidad>
+      <precioUnitario>892.580000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>6248.06</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>6248.06</baseImponible>
+          <valor>749.77</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>Redes3</codigoPrincipal>
+      <descripcion>Kit de Patch Cort cortos para Switch</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>1661.520000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>1661.52</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>1661.52</baseImponible>
+          <valor>199.38</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>Redes2</codigoPrincipal>
+      <descripcion>Trans 10 Gbps SingleMode Optical Module 10GD20</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>708.400000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>708.40</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>708.40</baseImponible>
+          <valor>85.01</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>Redes</codigoPrincipal>
+      <descripcion>Trans 10 Gbps LongRange Direct Attach Cable 5m</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>50.230000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>50.23</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>50.23</baseImponible>
+          <valor>6.03</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>Switch3</codigoPrincipal>
+      <descripcion>Switch 32port, Layer 3</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>1286.710000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>1286.71</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>1286.71</baseImponible>
+          <valor>154.41</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>Switch2</codigoPrincipal>
+      <descripcion>Switch USWEnterprise48PoE (720W) aace</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>6</cantidad>
+      <precioUnitario>2059.510000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>12357.06</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>12357.06</baseImponible>
+          <valor>1482.85</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>Switch1</codigoPrincipal>
+      <descripcion>Switch Enterprise 8 PoE</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>3</cantidad>
+      <precioUnitario>591.190000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>1773.57</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>1773.57</baseImponible>
+          <valor>212.83</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>wifi1</codigoPrincipal>
+      <descripcion>Access Point U6 Enterprise Unifi WIFI</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>10</cantidad>
+      <precioUnitario>462.390000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>4623.90</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>4623.90</baseImponible>
+          <valor>554.87</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>Firewall1</codigoPrincipal>
+      <descripcion>Dream Machine Special Edition</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>642.710000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>642.71</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>642.71</baseImponible>
+          <valor>77.13</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="Ubicacion">0</campoAdicional>
+    <campoAdicional nombre="Direccion">Direccion Cesar Davila N10222</campoAdicional>
+    <campoAdicional nombre="Telefono">3959960</campoAdicional>
+    <campoAdicional nombre="Email">msosa@saintdominic.edu.ec</campoAdicional>
+    <campoAdicional nombre="Email2">msosa@saintdominic.edu.ec</campoAdicional>
+    <campoAdicional nombre="Referencia">99999999</campoAdicional>
+  </infoAdicional>
+</factura>

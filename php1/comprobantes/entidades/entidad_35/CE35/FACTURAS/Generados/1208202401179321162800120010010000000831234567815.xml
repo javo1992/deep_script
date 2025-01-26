@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>Corporacion de Sistemas Informaticos  Corsinf SAS</razonSocial>
+    <nombreComercial>Corsinf </nombreComercial>
+    <ruc>1793211628001</ruc>
+    <claveAcceso>1208202401179321162800120010010000000831234567815</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>001</ptoEmi>
+    <secuencial>000000083</secuencial>
+    <dirMatriz>De Los Motilones N40345 y Miguel Albornoz</dirMatriz>
+    <contribuyenteRimpe>CONTRIBUYENTE RÉGIMEN RIMPE</contribuyenteRimpe>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>12/08/2024</fechaEmision>
+    <dirEstablecimiento>AV. 12 DE OCTUBRE 1076 Y ROCA</dirEstablecimiento>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>PUCE</razonSocialComprador>
+    <identificacionComprador>1790105601001</identificacionComprador>
+    <totalSinImpuestos>3690.96</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>0</codigoPorcentaje>
+        <descuentoAdicional>0</descuentoAdicional>
+        <baseImponible>0.00</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>4</codigoPorcentaje>
+        <descuentoAdicional>0.00</descuentoAdicional>
+        <baseImponible>3690.96</baseImponible>
+        <tarifa>15.00</tarifa>
+        <valor>553.65</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>4244.61</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>20</formaPago>
+        <total>4244.61</total>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>RESINA</codigoPrincipal>
+      <descripcion>CINTAS DE RESINA 6200</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>3</cantidad>
+      <precioUnitario>124.600000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>373.80</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>373.80</baseImponible>
+          <valor>56.07</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>RFID 44</codigoPrincipal>
+      <descripcion>Etiquetas 1.7656x0.5156in (44.5x19.1mm); TT, RFID 5000roll</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>2</cantidad>
+      <precioUnitario>897.120000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>1794.24</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>1794.24</baseImponible>
+          <valor>269.14</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>RFID 45</codigoPrincipal>
+      <descripcion>Etiquetas 1.7656x0.5156in (45x13mm); TT, RFID 600roll</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>3</cantidad>
+      <precioUnitario>507.640000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>1522.92</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>1522.92</baseImponible>
+          <valor>228.44</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="Direccion">AV. 12 DE OCTUBRE 1076 Y ROCA</campoAdicional>
+    <campoAdicional nombre="Telefono">2991700</campoAdicional>
+    <campoAdicional nombre="Email">avasquez@puce.edu.ec</campoAdicional>
+    <campoAdicional nombre="Email2">avasquez@puce.edu.ec</campoAdicional>
+    <campoAdicional nombre="Referencia">99999999</campoAdicional>
+  </infoAdicional>
+</factura>

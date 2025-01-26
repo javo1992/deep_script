@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<guiaRemision id="comprobante" version="1.0.0">
+  <infoTributaria>
+    <ambiente>1</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>VACA PRIETO WALTER JALIL</razonSocial>
+    <nombreComercial>DISKCOVER SYSTEM</nombreComercial>
+    <ruc>0702164179001</ruc>
+    <claveAcceso>06070216417900110000000001234567814</claveAcceso>
+    <codDoc>06</codDoc>
+    <estab/>
+    <ptoEmi/>
+    <secuencial>000000000</secuencial>
+    <dirMatriz>Desarrollo para programacion de DiskCover System</dirMatriz>
+    <contribuyenteRimpe>CONTRIBUYENTE RÉGIMEN RIMPE</contribuyenteRimpe>
+  </infoTributaria>
+  <infoGuiaRemision>
+    <dirEstablecimiento>DESARROLLO PARA PROGRAMACION DE DISKCOVER SYSTEM</dirEstablecimiento>
+    <dirPartida/>
+    <razonSocialTransportista/>
+    <tipoIdentificacionTransportista>07</tipoIdentificacionTransportista>
+    <rucTransportista/>
+    <rise>000</rise>
+    <obligadoContabilidad>NO</obligadoContabilidad>
+    <fechaIniTransporte>31/12/1969</fechaIniTransporte>
+    <fechaFinTransporte>31/12/1969</fechaFinTransporte>
+    <placa/>
+  </infoGuiaRemision>
+  <destinatarios>
+    <destinatario>
+      <identificacionDestinatario/>
+      <razonSocialDestinatario/>
+      <dirDestinatario/>
+      <motivoTraslado>Translado de mercaderia</motivoTraslado>
+      <ruta>De  a </ruta>
+      <codDocSustento>00</codDocSustento>
+      <numDocSustento>-000000000</numDocSustento>
+      <numAutDocSustento/>
+      <fechaEmisionDocSustento>31/12/1969</fechaEmisionDocSustento>
+      <detalles>
+        <detalle>
+          <codigoInterno>01.01.37</codigoInterno>
+          <descripcion>Pollo  1</descripcion>
+          <cantidad>1</cantidad>
+        </detalle>
+        <detalle>
+          <codigoInterno>01.01.005</codigoInterno>
+          <descripcion>HORAS ADICIONALES DE DESARROLLO (INTEGRACION TIMEMANAGER E INTRANET)</descripcion>
+          <cantidad>8</cantidad>
+        </detalle>
+        <detalle>
+          <codigoInterno>01.01.37</codigoInterno>
+          <descripcion>Pollo  1</descripcion>
+          <cantidad>1</cantidad>
+        </detalle>
+        <detalle>
+          <codigoInterno>01.01.37</codigoInterno>
+          <descripcion>Pollo  1</descripcion>
+          <cantidad>1</cantidad>
+        </detalle>
+        <detalle>
+          <codigoInterno>01.01.37</codigoInterno>
+          <descripcion>Pollo  1</descripcion>
+          <cantidad>1</cantidad>
+        </detalle>
+        <detalle>
+          <codigoInterno>01.01.37</codigoInterno>
+          <descripcion>Pollo  1</descripcion>
+          <cantidad>1</cantidad>
+        </detalle>
+        <detalle>
+          <codigoInterno>001.001</codigoInterno>
+          <descripcion>prueba 1</descripcion>
+          <cantidad>1</cantidad>
+        </detalle>
+      </detalles>
+    </destinatario>
+  </destinatarios>
+  <infoAdicional/>
+</guiaRemision>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>Corporacion de Sistemas Informaticos  Corsinf SAS</razonSocial>
+    <nombreComercial>Corsinf </nombreComercial>
+    <ruc>1793211628001</ruc>
+    <claveAcceso>1807202401179321162800120010010000000731234567811</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>001</ptoEmi>
+    <secuencial>000000073</secuencial>
+    <dirMatriz>De Los Motilones N40345 y Miguel Albornoz</dirMatriz>
+    <contribuyenteRimpe>CONTRIBUYENTE RÉGIMEN RIMPE</contribuyenteRimpe>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>18/07/2024</fechaEmision>
+    <dirEstablecimiento>PARIS N43212 Y RIO COCA</dirEstablecimiento>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>CLINICA DE ESPECIALIDADES GALENUS S.A.</razonSocialComprador>
+    <identificacionComprador>1791413083001</identificacionComprador>
+    <totalSinImpuestos>251.16</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>0</codigoPorcentaje>
+        <descuentoAdicional>0</descuentoAdicional>
+        <baseImponible>0.00</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>4</codigoPorcentaje>
+        <descuentoAdicional>0.00</descuentoAdicional>
+        <baseImponible>251.16</baseImponible>
+        <tarifa>15.00</tarifa>
+        <valor>37.67</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>288.83</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>20</formaPago>
+        <total>288.83</total>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>211</codigoPrincipal>
+      <descripcion>LECTOR BIOMETRICO FACIAL HUELLA</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>182.160000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>182.16</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>182.16</baseImponible>
+          <valor>27.32</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>4</codigoPrincipal>
+      <descripcion>SERVICIOS GENERALES  SOPORTE TECNICO</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>69.000000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>69.00</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>69.00</baseImponible>
+          <valor>10.35</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="Direccion">PARIS N43212 Y RIO COCA</campoAdicional>
+    <campoAdicional nombre="Telefono">2240277</campoAdicional>
+    <campoAdicional nombre="Email">clinicagalenus@gmail.com</campoAdicional>
+    <campoAdicional nombre="Email2">clinicagalenus@gmail.com</campoAdicional>
+    <campoAdicional nombre="Referencia">99999999</campoAdicional>
+  </infoAdicional>
+</factura>

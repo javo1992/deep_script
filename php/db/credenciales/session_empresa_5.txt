@@ -1,0 +1,6 @@
+root
+
+localhost
+cafeteria
+3306
+MYSQL

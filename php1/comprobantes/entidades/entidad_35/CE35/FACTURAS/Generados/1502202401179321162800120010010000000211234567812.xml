@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>Corporacion de Sistemas Informaticos  Corsinf SAS</razonSocial>
+    <nombreComercial>Corsinf </nombreComercial>
+    <ruc>1793211628001</ruc>
+    <claveAcceso>1502202401179321162800120010010000000211234567812</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>001</ptoEmi>
+    <secuencial>000000021</secuencial>
+    <dirMatriz>De Los Motilones N40345 y Miguel Albornoz</dirMatriz>
+    <contribuyenteRimpe>CONTRIBUYENTE RÉGIMEN RIMPE</contribuyenteRimpe>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>15/02/2024</fechaEmision>
+    <dirEstablecimiento>Direccion Cesar Davila N10222</dirEstablecimiento>
+    <obligadoContabilidad>NO</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>CONGREGACIONN HERMANAS DOMINICAS</razonSocialComprador>
+    <identificacionComprador>1791906810001</identificacionComprador>
+    <totalSinImpuestos>528</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>0</codigoPorcentaje>
+        <descuentoAdicional>0</descuentoAdicional>
+        <baseImponible>0.00</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>2</codigoPorcentaje>
+        <descuentoAdicional>0.00</descuentoAdicional>
+        <baseImponible>528.00</baseImponible>
+        <tarifa>12.00</tarifa>
+        <valor>63.36</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>591.36</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>20</formaPago>
+        <total>591.36</total>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>Acceso3</codigoPrincipal>
+      <descripcion>Lectores Wiegand</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>6</cantidad>
+      <precioUnitario>34.000000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>204.00</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>204.00</baseImponible>
+          <valor>24.48</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>Acceso2</codigoPrincipal>
+      <descripcion>Caja de Accesos 4 Puertas DSK2604</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>158.000000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>158.00</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>158.00</baseImponible>
+          <valor>18.96</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>213</codigoPrincipal>
+      <descripcion>BATERIA RECARGABLE 12VDC 7AMP</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>24.000000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>24.00</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>24.00</baseImponible>
+          <valor>2.88</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>FuentePoder1</codigoPrincipal>
+      <descripcion>Fuente de Poder PL12DCAK</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>58.000000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>58.00</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>58.00</baseImponible>
+          <valor>6.96</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>Portero1</codigoPrincipal>
+      <descripcion>Ip Video Intercom DSKH6320WTE</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>84.000000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>84.00</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>84.00</baseImponible>
+          <valor>10.08</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="Ubicacion">0</campoAdicional>
+    <campoAdicional nombre="Direccion">Direccion Cesar Davila N10222</campoAdicional>
+    <campoAdicional nombre="Telefono">3959960</campoAdicional>
+    <campoAdicional nombre="Email">msosa@saintdominic.edu.ec</campoAdicional>
+    <campoAdicional nombre="Email2">msosa@saintdominic.edu.ec</campoAdicional>
+    <campoAdicional nombre="Referencia">99999999</campoAdicional>
+  </infoAdicional>
+</factura>

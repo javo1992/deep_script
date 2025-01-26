@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>Corporacion de Sistemas Informaticos  Corsinf SAS</razonSocial>
+    <nombreComercial>Corsinf </nombreComercial>
+    <ruc>1793211628001</ruc>
+    <claveAcceso>1502202401179321162800120010010000000221234567818</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>001</ptoEmi>
+    <secuencial>000000022</secuencial>
+    <dirMatriz>De Los Motilones N40345 y Miguel Albornoz</dirMatriz>
+    <contribuyenteRimpe>CONTRIBUYENTE RÉGIMEN RIMPE</contribuyenteRimpe>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>15/02/2024</fechaEmision>
+    <dirEstablecimiento>Direccion Cesar Davila N10222</dirEstablecimiento>
+    <obligadoContabilidad>NO</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>CONGREGACIONN HERMANAS DOMINICAS</razonSocialComprador>
+    <identificacionComprador>1791906810001</identificacionComprador>
+    <totalSinImpuestos>515.2</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>0</codigoPorcentaje>
+        <descuentoAdicional>0</descuentoAdicional>
+        <baseImponible>0.00</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>2</codigoPorcentaje>
+        <descuentoAdicional>0.00</descuentoAdicional>
+        <baseImponible>515.20</baseImponible>
+        <tarifa>12.00</tarifa>
+        <valor>61.83</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>577.03</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>20</formaPago>
+        <total>577.03</total>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>213</codigoPrincipal>
+      <descripcion>BATERIA RECARGABLE 12VDC 7AMP</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>10</cantidad>
+      <precioUnitario>16.740000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>167.40</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>167.40</baseImponible>
+          <valor>20.09</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>212</codigoPrincipal>
+      <descripcion>FUENTE PARA CONTROL DE ACCESO 5AMP</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>10</cantidad>
+      <precioUnitario>34.780000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>347.80</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>347.80</baseImponible>
+          <valor>41.74</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="Ubicacion">0</campoAdicional>
+    <campoAdicional nombre="Direccion">Direccion Cesar Davila N10222</campoAdicional>
+    <campoAdicional nombre="Telefono">3959960</campoAdicional>
+    <campoAdicional nombre="Email">msosa@saintdominic.edu.ec</campoAdicional>
+    <campoAdicional nombre="Email2">msosa@saintdominic.edu.ec</campoAdicional>
+    <campoAdicional nombre="Referencia">99999999</campoAdicional>
+  </infoAdicional>
+</factura>

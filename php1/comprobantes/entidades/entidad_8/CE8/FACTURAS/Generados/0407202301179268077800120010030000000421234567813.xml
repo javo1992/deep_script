@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>TRANSPEIMALAYA S.A.</razonSocial>
+    <nombreComercial>TRANSPORTE PESADO IMALAYA TRANSPEIMALAYA S.A.</nombreComercial>
+    <ruc>1792680778001</ruc>
+    <claveAcceso>0407202301179268077800120010030000000421234567813</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>003</ptoEmi>
+    <secuencial>000000042</secuencial>
+    <dirMatriz>CAYETANO CESTARIS S7158 Y PADRE ELIAS BRITO</dirMatriz>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>04/07/2023</fechaEmision>
+    <dirEstablecimiento>GALO MOLINA Y MAXIMILIANO RODRIGUEZ</dirEstablecimiento>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>TRANSCORMOGAL S.A.</razonSocialComprador>
+    <identificacionComprador>1792282411001</identificacionComprador>
+    <totalSinImpuestos>490</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>0</codigoPorcentaje>
+        <descuentoAdicional>0</descuentoAdicional>
+        <baseImponible>490.00</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>490.00</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>01</formaPago>
+        <total>490.00</total>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>3</codigoPrincipal>
+      <descripcion>VIAJES LA UNIVERSAL</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>490.000000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>490.00</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-003"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>0</codigoPorcentaje>
+          <tarifa>0</tarifa>
+          <baseImponible>490.00</baseImponible>
+          <valor>0.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="Direccion">GALO MOLINA Y MAXIMILIANO RODRIGUEZ</campoAdicional>
+    <campoAdicional nombre="Telefono">0967725552</campoAdicional>
+    <campoAdicional nombre="Email">facturacion@transcormogal.com</campoAdicional>
+    <campoAdicional nombre="Email2">facturacion@transcormogal.com</campoAdicional>
+    <campoAdicional nombre="Referencia">99999999</campoAdicional>
+  </infoAdicional>
+</factura>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>MILTON ANDRES RUBIO PUETATE</razonSocial>
+    <nombreComercial>CORSINF</nombreComercial>
+    <ruc>1712605284001</ruc>
+    <claveAcceso>0712202301171260528400120010010000008251234567811</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>001</ptoEmi>
+    <secuencial>000000825</secuencial>
+    <dirMatriz>De los Motilones N40345 y Camilo Gallegos</dirMatriz>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>07/12/2023</fechaEmision>
+    <dirEstablecimiento>Jose de la cuadra n13349 y de la fraternidad</dirEstablecimiento>
+    <obligadoContabilidad>NO</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>ALEXANDRA GALLARDO ROMERO</razonSocialComprador>
+    <identificacionComprador>1712964129001</identificacionComprador>
+    <totalSinImpuestos>462</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>0</codigoPorcentaje>
+        <descuentoAdicional>0</descuentoAdicional>
+        <baseImponible>0.00</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>2</codigoPorcentaje>
+        <descuentoAdicional>0.00</descuentoAdicional>
+        <baseImponible>462.00</baseImponible>
+        <tarifa>12.00</tarifa>
+        <valor>55.44</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>517.44</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>01</formaPago>
+        <total>517.44</total>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>SWITCH</codigoPrincipal>
+      <descripcion>SWITCH 24 PUERTOS POE</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>462.000000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>462.00</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>462.00</baseImponible>
+          <valor>55.44</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="Direccion">Jose de la cuadra n13349 y de la fraternidad</campoAdicional>
+    <campoAdicional nombre="Telefono">6022678</campoAdicional>
+    <campoAdicional nombre="Email">mediasytextiles@yahoo.es</campoAdicional>
+    <campoAdicional nombre="Email2">mediasytextiles@yahoo.es</campoAdicional>
+    <campoAdicional nombre="Referencia">99999999</campoAdicional>
+  </infoAdicional>
+</factura>

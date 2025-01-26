@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>Corporacion de Sistemas Informaticos  Corsinf SAS</razonSocial>
+    <nombreComercial>Corsinf </nombreComercial>
+    <ruc>1793211628001</ruc>
+    <claveAcceso>2205202401179321162800120010010000000511234567815</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>001</ptoEmi>
+    <secuencial>000000051</secuencial>
+    <dirMatriz>De Los Motilones N40345 y Miguel Albornoz</dirMatriz>
+    <contribuyenteRimpe>CONTRIBUYENTE RÉGIMEN RIMPE</contribuyenteRimpe>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>22/05/2024</fechaEmision>
+    <dirEstablecimiento>MIRAFLORES VELLO SN</dirEstablecimiento>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>ECUAPETQUIM CIA LTDA</razonSocialComprador>
+    <identificacionComprador>1791727797001</identificacionComprador>
+    <totalSinImpuestos>2541.69</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>0</codigoPorcentaje>
+        <descuentoAdicional>0</descuentoAdicional>
+        <baseImponible>0.00</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>4</codigoPorcentaje>
+        <descuentoAdicional>0.00</descuentoAdicional>
+        <baseImponible>2541.69</baseImponible>
+        <tarifa>15.00</tarifa>
+        <valor>381.26</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>2922.95</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>20</formaPago>
+        <total>2922.95</total>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>UPS 1KVA INTERACTIVO</codigoPrincipal>
+      <descripcion>UPS 1KVA INTERACTIVO</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>120.260000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>120.26</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>120.26</baseImponible>
+          <valor>18.04</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>50</codigoPrincipal>
+      <descripcion>PATCH PANEL MODULAR CAT6 24 PTOS</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>2</cantidad>
+      <precioUnitario>64.690000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>129.38</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>129.38</baseImponible>
+          <valor>19.41</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>SWITCH POE 8 PUERTOS</codigoPrincipal>
+      <descripcion>SWITCH POE 8 PUERTOS</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>43.130000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>43.13</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>43.13</baseImponible>
+          <valor>6.47</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>LECTOR BIOMETRICO</codigoPrincipal>
+      <descripcion>LECTOR BIOMETRICO</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>186.880000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>186.88</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>186.88</baseImponible>
+          <valor>28.03</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>TELEFONO WIFI </codigoPrincipal>
+      <descripcion>TELEFONO WIFI </descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>129.380000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>129.38</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>129.38</baseImponible>
+          <valor>19.41</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>108</codigoPrincipal>
+      <descripcion>PATCH CORD 3 PIES</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>10</cantidad>
+      <precioUnitario>5.750000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>57.50</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>57.50</baseImponible>
+          <valor>8.63</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>48</codigoPrincipal>
+      <descripcion>CONFIGURACION E INSTALACION</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>600.000000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>600.00</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>600.00</baseImponible>
+          <valor>90.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>wifi1</codigoPrincipal>
+      <descripcion>Access Point U6 Enterprise Unifi WIFI</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>2</cantidad>
+      <precioUnitario>368.000000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>736.00</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>736.00</baseImponible>
+          <valor>110.40</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>107</codigoPrincipal>
+      <descripcion>FIREWLL UDM UNIFI SECURITY GATEWAY</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>539.160000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>539.16</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>539.16</baseImponible>
+          <valor>80.87</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="Direccion">MIRAFLORES VELLO SN</campoAdicional>
+    <campoAdicional nombre="Telefono">3948300</campoAdicional>
+    <campoAdicional nombre="Email">contabilidad@ecuapetquim.com</campoAdicional>
+    <campoAdicional nombre="Email2">contabilidad@ecuapetquim.com</campoAdicional>
+    <campoAdicional nombre="Referencia">99999999</campoAdicional>
+  </infoAdicional>
+</factura>

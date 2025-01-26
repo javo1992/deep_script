@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><autorizacion>
+  <estado>RECHAZADA</estado>
+  <comprobante><![CDATA[null]]></comprobante>
+  <mensajes>
+    <mensaje>
+      <mensaje>
+        <identificador>80</identificador>
+        <mensaje>ERROR EN LA ESTRUCTURA DE LA CLAVE DE ACCESO</mensaje>
+        <informacionAdicional>Error al consultar la clave acceso. Error longitud clave acceso no valida.</informacionAdicional>
+      </mensaje>
+    </mensaje>
+  </mensajes>
+</autorizacion>

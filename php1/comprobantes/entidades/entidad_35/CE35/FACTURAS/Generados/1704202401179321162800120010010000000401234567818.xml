@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>Corporacion de Sistemas Informaticos  Corsinf SAS</razonSocial>
+    <nombreComercial>Corsinf </nombreComercial>
+    <ruc>1793211628001</ruc>
+    <claveAcceso>1704202401179321162800120010010000000401234567818</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>001</ptoEmi>
+    <secuencial>000000040</secuencial>
+    <dirMatriz>De Los Motilones N40345 y Miguel Albornoz</dirMatriz>
+    <contribuyenteRimpe>CONTRIBUYENTE RÉGIMEN RIMPE</contribuyenteRimpe>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>17/04/2024</fechaEmision>
+    <dirEstablecimiento>Direccion Cesar Davila N10222</dirEstablecimiento>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>CONGREGACIONN HERMANAS DOMINICAS</razonSocialComprador>
+    <identificacionComprador>1791906810001</identificacionComprador>
+    <totalSinImpuestos>719.6</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>0</codigoPorcentaje>
+        <descuentoAdicional>0</descuentoAdicional>
+        <baseImponible>0.00</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>4</codigoPorcentaje>
+        <descuentoAdicional>0.00</descuentoAdicional>
+        <baseImponible>719.60</baseImponible>
+        <tarifa>15.00</tarifa>
+        <valor>107.94</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>827.54</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>20</formaPago>
+        <total>827.54</total>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>72</codigoPrincipal>
+      <descripcion>DISCO DURO SSD 480GB</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>6</cantidad>
+      <precioUnitario>63.000000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>378.00</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>378.00</baseImponible>
+          <valor>56.70</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>102</codigoPrincipal>
+      <descripcion>MEMORIAS DE 8GB LAP</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>6</cantidad>
+      <precioUnitario>42.000000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>252.00</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>252.00</baseImponible>
+          <valor>37.80</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>158</codigoPrincipal>
+      <descripcion>DIMM DDR3 8GB</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>42.000000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>42.00</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>42.00</baseImponible>
+          <valor>6.30</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>Redes3</codigoPrincipal>
+      <descripcion>Kit de Pasta Termica</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>2</cantidad>
+      <precioUnitario>23.800000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>47.60</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>47.60</baseImponible>
+          <valor>7.14</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="Ubicacion">0</campoAdicional>
+    <campoAdicional nombre="Direccion">Direccion Cesar Davila N10222</campoAdicional>
+    <campoAdicional nombre="Telefono">3959960</campoAdicional>
+    <campoAdicional nombre="Email">msosa@saintdominic.edu.ec</campoAdicional>
+    <campoAdicional nombre="Email2">msosa@saintdominic.edu.ec</campoAdicional>
+    <campoAdicional nombre="Referencia">99999999</campoAdicional>
+  </infoAdicional>
+</factura>

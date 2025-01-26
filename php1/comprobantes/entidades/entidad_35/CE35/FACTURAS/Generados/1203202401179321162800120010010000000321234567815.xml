@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>Corporacion de Sistemas Informaticos  Corsinf SAS</razonSocial>
+    <nombreComercial>Corsinf </nombreComercial>
+    <ruc>1793211628001</ruc>
+    <claveAcceso>1203202401179321162800120010010000000321234567815</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>001</ptoEmi>
+    <secuencial>000000032</secuencial>
+    <dirMatriz>De Los Motilones N40345 y Miguel Albornoz</dirMatriz>
+    <contribuyenteRimpe>CONTRIBUYENTE RÉGIMEN RIMPE</contribuyenteRimpe>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>12/03/2024</fechaEmision>
+    <dirEstablecimiento>GRAL. ROBLES Y AV. AMAZONAS EDIFICIO PROINCO CALISTO</dirEstablecimiento>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>CFR AJUSTADORA DE SINIESTRO S.A.</razonSocialComprador>
+    <identificacionComprador>1792676541001</identificacionComprador>
+    <totalSinImpuestos>928.2</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>0</codigoPorcentaje>
+        <descuentoAdicional>0</descuentoAdicional>
+        <baseImponible>0.00</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>2</codigoPorcentaje>
+        <descuentoAdicional>0.00</descuentoAdicional>
+        <baseImponible>928.20</baseImponible>
+        <tarifa>12.00</tarifa>
+        <valor>111.38</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>1039.58</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>20</formaPago>
+        <total>1039.58</total>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>RG-RAP2260</codigoPrincipal>
+      <descripcion>RJE0011 RUIJIE REYEE ACCESS POINT WIFI 6 AX1800 DUAL BAND 2  PTOS GIGA RGRAP2260(G)</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>159.600000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>159.60</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>159.60</baseImponible>
+          <valor>19.15</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>RG-ES226GC</codigoPrincipal>
+      <descripcion>RJE0004 RUIJIE REYEE SWITCH CLOUD 24 PTOS POE + 2 SFP 370W  RACK C2 RGES226GCP</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>441.000000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>441.00</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>441.00</baseImponible>
+          <valor>52.92</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>RJE0024</codigoPrincipal>
+      <descripcion>RJE0024 RUIJIE REYEE ROUTER GATEWAY CLOUD 5 PTOS GIGA  2WAN RGEG105GV2</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>117.600000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>117.60</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>117.60</baseImponible>
+          <valor>14.11</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>4</codigoPrincipal>
+      <descripcion>SERVICIOS GENERALES  SOPORTE TECNICO</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>210.000000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>210.00</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>210.00</baseImponible>
+          <valor>25.20</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="Direccion">GRAL. ROBLES Y AV. AMAZONAS EDIFICIO PROINCO CALISTO</campoAdicional>
+    <campoAdicional nombre="Telefono">2500055</campoAdicional>
+    <campoAdicional nombre="Email">cfrajustes@gmail.com</campoAdicional>
+    <campoAdicional nombre="Email2">cfrajustes@gmail.com</campoAdicional>
+    <campoAdicional nombre="Referencia">99999999</campoAdicional>
+  </infoAdicional>
+</factura>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>TRANSPEIMALAYA S.A.</razonSocial>
+    <nombreComercial>TRANSPORTE PESADO IMALAYA TRANSPEIMALAYA S.A.</nombreComercial>
+    <ruc>1792680778001</ruc>
+    <claveAcceso>0307202301179268077800120010030000000381234567817</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>003</ptoEmi>
+    <secuencial>000000038</secuencial>
+    <dirMatriz>CAYETANO CESTARIS S7158 Y PADRE ELIAS BRITO</dirMatriz>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>03/07/2023</fechaEmision>
+    <dirEstablecimiento>Victoria Alta S61 y Oe4F</dirEstablecimiento>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>Compania de transporte de carga Villarroel y Villarroel CIA LTDA</razonSocialComprador>
+    <identificacionComprador>1792379881001</identificacionComprador>
+    <totalSinImpuestos>900</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>0</codigoPorcentaje>
+        <descuentoAdicional>0</descuentoAdicional>
+        <baseImponible>900.00</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>900.00</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>01</formaPago>
+        <total>900.00</total>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>3</codigoPrincipal>
+      <descripcion>SERVICIO DE TRANSPORTE</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>900.000000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>900.00</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-003"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>0</codigoPorcentaje>
+          <tarifa>0</tarifa>
+          <baseImponible>900.00</baseImponible>
+          <valor>0.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="Direccion">Victoria Alta S61 y Oe4F</campoAdicional>
+    <campoAdicional nombre="Telefono">0984063534</campoAdicional>
+    <campoAdicional nombre="Email">vyv_transcarga@hotmail.com</campoAdicional>
+    <campoAdicional nombre="Email2">vyv_transcarga@hotmail.com</campoAdicional>
+    <campoAdicional nombre="Referencia">99999999</campoAdicional>
+  </infoAdicional>
+</factura>

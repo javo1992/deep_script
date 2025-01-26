@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>Corporacion de Sistemas Informaticos  Corsinf SAS</razonSocial>
+    <nombreComercial>Corsinf </nombreComercial>
+    <ruc>1793211628001</ruc>
+    <claveAcceso>0505202401179321162800120010010000000481234567815</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>001</ptoEmi>
+    <secuencial>000000048</secuencial>
+    <dirMatriz>De Los Motilones N40345 y Miguel Albornoz</dirMatriz>
+    <contribuyenteRimpe>CONTRIBUYENTE RÉGIMEN RIMPE</contribuyenteRimpe>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>05/05/2024</fechaEmision>
+    <dirEstablecimiento>SAN JOSE COSTA RICA  CURRIDABAT CENTRO COMERCIAL JOSE MARIA ZELEDON CASA 121</dirEstablecimiento>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>06</tipoIdentificacionComprador>
+    <razonSocialComprador>LMT CONEXUS GROUP S.A</razonSocialComprador>
+    <identificacionComprador>3101680692</identificacionComprador>
+    <totalSinImpuestos>14.13</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>0</codigoPorcentaje>
+        <descuentoAdicional>0</descuentoAdicional>
+        <baseImponible>0.00</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>4</codigoPorcentaje>
+        <descuentoAdicional>0.00</descuentoAdicional>
+        <baseImponible>14.13</baseImponible>
+        <tarifa>15.00</tarifa>
+        <valor>2.12</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>16.25</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>20</formaPago>
+        <total>16.25</total>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>136</codigoPrincipal>
+      <descripcion>GASTOS DE EDUCADORAS</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>14.130000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>14.13</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>14.13</baseImponible>
+          <valor>2.12</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="Direccion">SAN JOSE COSTA RICA  CURRIDABAT CENTRO COMERCIAL JOSE MARIA ZELEDON CASA 121</campoAdicional>
+    <campoAdicional nombre="Email">fe.emi@conexusgroup.com</campoAdicional>
+    <campoAdicional nombre="Email2">fe.emi@conexusgroup.com</campoAdicional>
+    <campoAdicional nombre="Referencia">99999999</campoAdicional>
+  </infoAdicional>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature566411">
+<ds:SignedInfo Id="Signature-SignedInfo202822">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID170349" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature566411-SignedProperties183826">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>Oj9nZSscXAy7rawXmS/IiWHUd6o=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate178275">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>ac/zAawq8voiqSdnWC473qF8DQY=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-715293" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>/T35KNBspepuzdUVlsnnWwIW0IU=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue274343">
+37vcgSb/WfaRfOVrmMGrEYrRSk5Rl+RpT6a5uJTkFusqPSgyowSCQ7PrsVSeTq27iSCTwCOUTseM
+I4ClLUFTLb2Lc5aNuGycoR5vnB5OQtR6zAfqfu7JGTNTXSB17Q19FjU31oWaNYnPG9yEa612Qrs1
+L99OyuvGyHK7n9HHDJ/qLzf/vM6CWd/orBtZmF+gbBtyEN+EFr+Ppg1l2vceWXozNVrsPIVfz6u4
+WfgLWhWmoPSyp2zVutPXzAIf2clIPdh8d1OXkdRKHrx081jhereQRGSgV2wmHDlP2qbV3t+mWa6L
+kepSkqKWJ1wIn63qxslhgJITu4qzHRDioiz98g==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate178275">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIMGTCCCgGgAwIBAgIEQSGfSjANBgkqhkiG9w0BAQsFADCBmTELMAkGA1UEBhMCRUMxHTAbBgNV
+BAoMFFNFQ1VSSVRZIERBVEEgUy5BLiAyMTAwLgYDVQQLDCdFTlRJREFEIERFIENFUlRJRklDQUNJ
+T04gREUgSU5GT1JNQUNJT04xOTA3BgNVBAMMMEFVVE9SSURBRCBERSBDRVJUSUZJQ0FDSU9OIFNV
+QkNBLTIgU0VDVVJJVFkgREFUQTAeFw0yNDAxMDUwMDAwMTlaFw0yNjAxMDQwMDAwMTlaMIGbMSQw
+IgYDVQQDDBtNSUxUT04gQU5EUkVTIFJVQklPIFBVRVRBVEUxFTATBgNVBAUTDDA0MDEyNDE5MTAw
+NjEwMC4GA1UECwwnRU5USURBRCBERSBDRVJUSUZJQ0FDSU9OIERFIElORk9STUFDSU9OMR0wGwYD
+VQQKDBRTRUNVUklUWSBEQVRBIFMuQS4gMjELMAkGA1UEBhMCRUMwggEiMA0GCSqGSIb3DQEBAQUA
+A4IBDwAwggEKAoIBAQDhvTRvGaGYhH499nuMLTDA6cO29Up0kgphlBREMu2PazRpzYgP3ep9p/XS
+wv42Ewb47taFs1Ec/LUmEQLupEDOeWW/SCcMpWISwSsxnGA+AHWI3vI2hgwd1Hg/ZANM3u6hvDDX
+CjmPTpll7He4feB824o/uHgzU6U2hINJp5yg7u0e3L0NLEQSdIHcZ2t+SnkcpBGeLWu8OWh4S+VO
+Qehi6aX+Hb/Sh0Nlx3XbOVb/a9B0hBinUp/gzqdsps0BE1B8DBtQvEzOP+ePnCBVtzd54irVgC/v
+aNxwlbfhMVigajKp5YHTBWY8ZfwAH5JWbDXNJqkwtg1F5FFkIrdU9n/jAgMBAAGjggdjMIIHXzAM
+BgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFIy6yhFXeCWAHWsKS1W/ja5i3b2PMFkGCCsGAQUFBwEB
+BE0wSzBJBggrBgEFBQcwAYY9aHR0cDovL29jc3Bndy5zZWN1cml0eWRhdGEubmV0LmVjL2VqYmNh
+L3B1YmxpY3dlYi9zdGF0dXMvb2NzcDCBzwYDVR0uBIHHMIHEMIHBoIG+oIG7hoG4bGRhcDovL2xk
+YXBzZGNhMi5zZWN1cml0eWRhdGEubmV0LmVjL0NOPUFVVE9SSURBRCBERSBDRVJUSUZJQ0FDSU9O
+IFNVQkNBLTIgU0VDVVJJVFkgREFUQSxPVT1FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5G
+T1JNQUNJT04sTz1TRUNVUklUWSBEQVRBIFMuQS4gMixDPUVDP2RlbHRhUmV2b2NhdGlvbkxpc3Q/
+YmFzZTAdBgNVHREEFjAUgRJtcnViaW9AY29yc2luZi5jb20wggEVBgNVHSAEggEMMIIBCDBiBgor
+BgEEAYKmcgIJMFQwUgYIKwYBBQUHAgIwRh5EAEMAZQByAHQAaQBmAGkAYwBhAGQAbwAgAGQAZQAg
+AFIAZQBwAHIAZQBzAGUAbgB0AGEAbgB0AGUAIABMAGUAZwBhAGwwgaEGCisGAQQBgqZyAgMwgZIw
+gY8GCCsGAQUFBwIBFoGCaHR0cHM6Ly93d3cuc2VjdXJpdHlkYXRhLm5ldC5lYy93cC1jb250ZW50
+L2Rvd25sb2Fkcy9Ob3JtYXRpdmFzL1BfZGVfQ2VydGlmaWNhZG9zL1BvbGl0aWNhcyBkZSBDZXJ0
+aWZpY2FkbyBSZXByZXNlbnRhbnRlIExlZ2FsLnBkZjCCAqIGA1UdHwSCApkwggKVMIHloEGgP4Y9
+aHR0cDovL29jc3Bndy5zZWN1cml0eWRhdGEubmV0LmVjL2VqYmNhL3B1YmxpY3dlYi9zdGF0dXMv
+b2NzcKKBn6SBnDCBmTE5MDcGA1UEAwwwQVVUT1JJREFEIERFIENFUlRJRklDQUNJT04gU1VCQ0Et
+MiBTRUNVUklUWSBEQVRBMTAwLgYDVQQLDCdFTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5G
+T1JNQUNJT04xHTAbBgNVBAoMFFNFQ1VSSVRZIERBVEEgUy5BLiAyMQswCQYDVQQGEwJFQzCBx6CB
+xKCBwYaBvmxkYXA6Ly9sZGFwc2RjYTIuc2VjdXJpdHlkYXRhLm5ldC5lYy9DTj1BVVRPUklEQUQg
+REUgQ0VSVElGSUNBQ0lPTiBTVUJDQS0yIFNFQ1VSSVRZIERBVEEsT1U9RU5USURBRCBERSBDRVJU
+SUZJQ0FDSU9OIERFIElORk9STUFDSU9OLE89U0VDVVJJVFkgREFUQSBTLkEuIDIsQz1FQz9jZXJ0
+aWZpY2F0ZVJldm9jYXRpb25MaXN0P2Jhc2UwgeCggd2ggdqGgddodHRwczovL3BvcnRhbC1vcGVy
+YWRvcjIuc2VjdXJpdHlkYXRhLm5ldC5lYy9lamJjYS9wdWJsaWN3ZWIvd2ViZGlzdC9jZXJ0ZGlz
+dD9jbWQ9Y3JsJmlzc3Vlcj1DTj1BVVRPUklEQUQgREUgQ0VSVElGSUNBQ0lPTiBTVUJDQS0yIFNF
+Q1VSSVRZIERBVEEsT1U9RU5USURBRCBERSBDRVJUSUZJQ0FDSU9OIERFIElORk9STUFDSU9OLE89
+U0VDVVJJVFkgREFUQSBTLkEuIDIsQz1FQzAdBgNVHQ4EFgQU0WQCRJvEpZdfD0V6c3cxrcTSfEow
+KwYDVR0QBCQwIoAPMjAyNDAxMDUwMDAwMTlagQ8yMDI2MDEwNDAwMDAxOVowCwYDVR0PBAQDAgXg
+MB8GCisGAQQBgqZyAwUEEQwPR0VSRU5URSBHRU5FUkFMMBoGCisGAQQBgqZyAwEEDAwKMTcxMjYw
+NTI4NDAVBgorBgEEAYKmcgMJBAcMBVFVSVRPMBEGCisGAQQBgqZyAyIEAwwBLjAyBgorBgEEAYKm
+cgMHBCQMIkRFIExPUyBNT1RJTE9ORVMgWSBDQU1JTE8gR0FMTEVHT1MwHQYKKwYBBAGCpnIDAgQP
+DA1NSUxUT04gQU5EUkVTMB8GCisGAQQBgqZyAyAEEQwPMDAyMDAxMDAwNzQ0MzI2MBMGCisGAQQB
+gqZyAyEEBQwDUEZYMBcGCisGAQQBgqZyAwwECQwHRUNVQURPUjAVBgorBgEEAYKmcgMDBAcMBVJV
+QklPMEIGCisGAQQBgqZyAwoENAwyQ09SUE9SQUNJT04gREUgU0lTVEVNQVMgSU5GT1JNQVRJQ09T
+IENPUlNJTkYgUyBBIFMwHQYKKwYBBAGCpnIDCwQPDA0xNzkzMjExNjI4MDAxMBIGCisGAQQBgqZy
+Ax0EBAwCTm8wFwYKKwYBBAGCpnIDBAQJDAdQVUVUQVRFMBoGCisGAQQBgqZyAwgEDAwKMDk5OTIx
+OTczODANBgkqhkiG9w0BAQsFAAOCAgEAmMx8viZpFPmxWxyj1+JTOxXqCKagTuln0iLafAzSv4mg
+Aa3PdRovt18qnNnc1Ho+LrHoz51thcSHMCR/OKiz3/xMXAcedYZEWq9k3NLZhtffAzpXXns7OGCk
+Se0I4VX3/3D9lo+4FcPz6Zmi+6x0lyqhrB3ze11eyeQihJSlfJerePCZ8/YH0S1SbWa1pGbH8e6G
+pqs6/mOd36s0Do0UyBMTaPOlL+IKKUtw0Hkt7cWZ88M5QiPKwibe/+zVS8zDzvvhQqfZh1Pgwv7O
+IAo025RAHel2N1tqKPsuiXddq0Ou+1hrpHXn6kJNhqug3KkzcwAlXJBY/2puofY66J2xinxulLar
+zZfavju0XWAskNkkGAd/x7IAKbrZYpnZmwBCACbfU6DUujXDS1RV8RJD18Y5F0JgGgF83DXEXtBY
+5MvzxQEomrkWcN0YX0pfPSd00CfcnE/pTvS+V6Cpkcvj7ZhZC69YBmRXobdlA1jWBD0IZjhR38kW
+hkw8flY2/1x1eGYoPkRHksfBdFHeifMhdl5ciqY/NhqBaXNsYiRp0LHQ8A2hhfQcqNENdkPrHNrA
+ipLhsMy6s6ldW0p+nbnm8CQN/R76hVZv8d59IauL+VFTzx19ic217SXpyJ5VE/IFeIFkDMbEHLzq
+4c2zhOCr87C+cLNkRD0zuMrPwhm+A48=
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+4b00bxmhmIR+PfZ7jC0wwOnDtvVKdJIKYZQURDLtj2s0ac2ID93qfaf10sL+NhMG+O7WhbNRHPy1
+JhEC7qRAznllv0gnDKViEsErMZxgPgB1iN7yNoYMHdR4P2QDTN7uobww1wo5j06ZZex3uH3gfNuK
+P7h4M1OlNoSDSaecoO7tHty9DSxEEnSB3Gdrfkp5HKQRni1rvDloeEvlTkHoYuml/h2/0odDZcd1
+2zlW/2vQdIQYp1Kf4M6nbKbNARNQfAwbULxMzj/nj5wgVbc3eeIq1YAv72jccJW34TFYoGoyqeWB
+0wVmPGX8AB+SVmw1zSapMLYNReRRZCK3VPZ/4w==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature566411-Object479873"><etsi:QualifyingProperties Target="#Signature566411"><etsi:SignedProperties Id="Signature566411-SignedProperties183826"><etsi:SignedSignatureProperties><etsi:SigningTime>2024-05-05T20:25:17-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>WoWx6VbOsVUEKhCiWx4O7JQxjPQ=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AUTORIDAD DE CERTIFICACION SUBCA-2 SECURITY DATA,OU=ENTIDAD DE CERTIFICACION DE INFORMACION,O=SECURITY DATA S.A. 2,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1092722506</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-715293"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>

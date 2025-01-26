@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<notaCredito id="comprobante" version="1.0.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>TRANSPEIMALAYA S.A.</razonSocial>
+    <nombreComercial>TRANSPORTE PESADO IMALAYA TRANSPEIMALAYA S.A.</nombreComercial>
+    <ruc>1792680778001</ruc>
+    <claveAcceso>1804202304179268077800120010030000000011234567811</claveAcceso>
+    <codDoc>04</codDoc>
+    <estab>001</estab>
+    <ptoEmi>003</ptoEmi>
+    <secuencial>000000001</secuencial>
+    <dirMatriz>CAYETANO CESTARIS S7158 Y PADRE ELIAS BRITO</dirMatriz>
+  </infoTributaria>
+  <infoNotaCredito>
+    <fechaEmision>18/04/2023</fechaEmision>
+    <dirEstablecimiento>CAYETANO CESTARIS S7158 Y PADRE ELIAS BRITO</dirEstablecimiento>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>TIENDAS INDUSTRIALES ASOCIADAS TIA S. A.</razonSocialComprador>
+    <identificacionComprador>0990017514001</identificacionComprador>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <codDocModificado>01</codDocModificado>
+    <numDocModificado>001-003-000000009</numDocModificado>
+    <fechaEmisionDocSustento>18/04/2023</fechaEmisionDocSustento>
+    <totalSinImpuestos>54</totalSinImpuestos>
+    <valorModificacion>54</valorModificacion>
+    <moneda>DOLAR</moneda>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>2</codigoPorcentaje>
+        <baseImponible>0.00</baseImponible>
+        <valor>0</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <motivo>Anulacion por Nota de Credito</motivo>
+  </infoNotaCredito>
+  <detalles>
+    <detalle>
+      <codigoInterno>1</codigoInterno>
+      <descripcion>FUMIGACION NOVIEMBRE DICIEMBRE 2022 Y ENERO FEBRERO 2023</descripcion>
+      <cantidad>4</cantidad>
+      <precioUnitario>13.50</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>54</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>0</codigoPorcentaje>
+          <tarifa>0</tarifa>
+          <baseImponible>54</baseImponible>
+          <valor>0.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="Direccion">CHIMBORAZO 217 Y LUQUE ESQ.</campoAdicional>
+    <campoAdicional nombre="Telefono">042598830</campoAdicional>
+    <campoAdicional nombre="Email">logistica100@tia.com.ec</campoAdicional>
+  </infoAdicional>
+</notaCredito>

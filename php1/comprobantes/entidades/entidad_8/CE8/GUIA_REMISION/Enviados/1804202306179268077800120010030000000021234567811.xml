@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><guiaRemision id="comprobante" version="1.0.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>TRANSPEIMALAYA S.A.</razonSocial>
+    <nombreComercial>TRANSPORTE PESADO IMALAYA TRANSPEIMALAYA S.A.</nombreComercial>
+    <ruc>1792680778001</ruc>
+    <claveAcceso>1804202306179268077800120010030000000021234567811</claveAcceso>
+    <codDoc>06</codDoc>
+    <estab>001</estab>
+    <ptoEmi>003</ptoEmi>
+    <secuencial>000000002</secuencial>
+    <dirMatriz>CAYETANO CESTARIS S7158 Y PADRE ELIAS BRITO</dirMatriz>
+  </infoTributaria>
+  <infoGuiaRemision>
+    <dirEstablecimiento>CAYETANO CESTARIS S7158 Y PADRE ELIAS BRITO</dirEstablecimiento>
+    <dirPartida>LOMAS DE SARGENTILLO</dirPartida>
+    <razonSocialTransportista>TRANSPORTE PESADO IMALAYA TRANSPEIMALAYA S.A.</razonSocialTransportista>
+    <tipoIdentificacionTransportista>07</tipoIdentificacionTransportista>
+    <rucTransportista>1792680778001</rucTransportista>
+    <rise>000</rise>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <fechaIniTransporte>18/04/2023</fechaIniTransporte>
+    <fechaFinTransporte>18/04/2023</fechaFinTransporte>
+    <placa>RAB4339</placa>
+  </infoGuiaRemision>
+  <destinatarios>
+    <destinatario>
+      <identificacionDestinatario>1792680778001</identificacionDestinatario>
+      <razonSocialDestinatario>TRANSPORTE PESADO IMALAYA TRANSPEIMALAYA S.A.</razonSocialDestinatario>
+      <dirDestinatario>GUAYAQUIL</dirDestinatario>
+      <motivoTraslado>Translado de mercaderia</motivoTraslado>
+      <ruta>De LOMAS DE SARGENTILLO a GUAYAQUIL</ruta>
+      <codDocSustento>00</codDocSustento>
+      <numDocSustento>001-003-000000011</numDocSustento>
+      <numAutDocSustento>0180420230117926807780012001003000000011123456781</numAutDocSustento>
+      <fechaEmisionDocSustento>18/04/2023</fechaEmisionDocSustento>
+      <detalles>
+        <detalle>
+          <codigoInterno>001.001</codigoInterno>
+          <descripcion>Servicios prueba</descripcion>
+          <cantidad>1</cantidad>
+        </detalle>
+      </detalles>
+    </destinatario>
+  </destinatarios>
+  <infoAdicional>
+    <campoAdicional nombre="Direccion">jipiro y santa barbara</campoAdicional>
+    <campoAdicional nombre="Telefono">0987242579</campoAdicional>
+    <campoAdicional nombre="Email">javier.farinango92@gmail.com</campoAdicional>
+  </infoAdicional>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature76930">
+<ds:SignedInfo Id="Signature-SignedInfo918752">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID82051" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature76930-SignedProperties860573">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>F9x1wqouGnskPfymQSG5n+oinw0=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate11031606">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>gq3gFOINQdKJGWvTpT0anDAA4z0=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-320668" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>7JaVi8Kppj+1DepE74K7AZWFFwc=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue231726">
+VCC7r4DPOmqyZZfBnuqt5M7+CMzXmdevjBVZFS0TO5I2FuGXQrAuqcaiyLKajyycZfDLtqmOnpWz
+bPNRupuaVFFgTUmkKiJEMMASa3poxAL3SyMPCBoyjBANAulmKbcy2KTvoylldMc4IClo0f5SxT2p
+w5kRJud4fajqF7EmSN0kduPMfX5hha/jTVFeoWUo111FUa4eFKNIPz8A2svvrjvj+uSEMf59AbeM
+fWUIywR4u6N+MDPwlRfkDWzZmf29LUAQOFS6Xa4tMzDrVDgFvhFk1IrxULpjO29TW8OjaTMSS/b7
+fkBl2zRwBZZjHNOwuiUZiWutRvhJ+p+u8gAOcg==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate11031606">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIMIjCCCgqgAwIBAgIEdRkTsTANBgkqhkiG9w0BAQsFADCBmTELMAkGA1UEBhMCRUMxHTAbBgNV
+BAoMFFNFQ1VSSVRZIERBVEEgUy5BLiAyMTAwLgYDVQQLDCdFTlRJREFEIERFIENFUlRJRklDQUNJ
+T04gREUgSU5GT1JNQUNJT04xOTA3BgNVBAMMMEFVVE9SSURBRCBERSBDRVJUSUZJQ0FDSU9OIFNV
+QkNBLTIgU0VDVVJJVFkgREFUQTAeFw0yMjEwMTkyMTU0NTlaFw0yMzEwMTkyMTU0NTlaMIGaMSMw
+IQYDVQQDDBpHRUFOQ0FSTE8gQVNFTkNJTyBQQU5DSEFOQTEVMBMGA1UEBRMMMTkxMDIyMTcwNDQz
+MTAwLgYDVQQLDCdFTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04xHTAbBgNV
+BAoMFFNFQ1VSSVRZIERBVEEgUy5BLiAyMQswCQYDVQQGEwJFQzCCASIwDQYJKoZIhvcNAQEBBQAD
+ggEPADCCAQoCggEBANNCQUOyjGHcwxMS+g3lQ+1o0ptvLMVne1Fz4FtlQ3NgBTrpgyZEay7FF4Fe
+N0g/uMgJxHBKm2wEf1+1jry2lvuhy5tR+lB0tXMFk4noleBWgXuLV1nJ7tLZojIk/13c2+Qn3E7u
++JfvYHoDKu7+eEG4N+4ABHvaDzRDaoomYIq+bz7ummT3Pp1LAGZWwPmgqYQoqP1gV8QR4+rU/2bj
+Ip3/skj5yrZ5Wcp3xyf8Y2Y1GC0ZD7dqQ68OsXikUQAbUqp3e6ru8rgJgtUqgnOfw8MijcUKcl2v
+izmuuwuKHyl6Gcg8pxLsvjCgvrgWx8Vn1VmY72d4+0FZaDY+JGyylZECAwEAAaOCB20wggdpMAwG
+A1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUjLrKEVd4JYAdawpLVb+NrmLdvY8wWQYIKwYBBQUHAQEE
+TTBLMEkGCCsGAQUFBzABhj1odHRwOi8vb2NzcGd3LnNlY3VyaXR5ZGF0YS5uZXQuZWMvZWpiY2Ev
+cHVibGljd2ViL3N0YXR1cy9vY3NwMIHPBgNVHS4EgccwgcQwgcGggb6ggbuGgbhsZGFwOi8vbGRh
+cHNkY2EyLnNlY3VyaXR5ZGF0YS5uZXQuZWMvQ049QVVUT1JJREFEIERFIENFUlRJRklDQUNJT04g
+U1VCQ0EtMiBTRUNVUklUWSBEQVRBLE9VPUVOVElEQUQgREUgQ0VSVElGSUNBQ0lPTiBERSBJTkZP
+Uk1BQ0lPTixPPVNFQ1VSSVRZIERBVEEgUy5BLiAyLEM9RUM/ZGVsdGFSZXZvY2F0aW9uTGlzdD9i
+YXNlMCIGA1UdEQQbMBmBF2dlYW5hc2VuY2lvQGhvdG1haWwuY29tMIIBFQYDVR0gBIIBDDCCAQgw
+YgYKKwYBBAGCpnICCTBUMFIGCCsGAQUFBwICMEYeRABDAGUAcgB0AGkAZgBpAGMAYQBkAG8AIABk
+AGUAIABSAGUAcAByAGUAcwBlAG4AdABhAG4AdABlACAATABlAGcAYQBsMIGhBgorBgEEAYKmcgID
+MIGSMIGPBggrBgEFBQcCARaBgmh0dHBzOi8vd3d3LnNlY3VyaXR5ZGF0YS5uZXQuZWMvd3AtY29u
+dGVudC9kb3dubG9hZHMvTm9ybWF0aXZhcy9QX2RlX0NlcnRpZmljYWRvcy9Qb2xpdGljYXMgZGUg
+Q2VydGlmaWNhZG8gUmVwcmVzZW50YW50ZSBMZWdhbC5wZGYwggKiBgNVHR8EggKZMIIClTCB5aBB
+oD+GPWh0dHA6Ly9vY3NwZ3cuc2VjdXJpdHlkYXRhLm5ldC5lYy9lamJjYS9wdWJsaWN3ZWIvc3Rh
+dHVzL29jc3CigZ+kgZwwgZkxOTA3BgNVBAMMMEFVVE9SSURBRCBERSBDRVJUSUZJQ0FDSU9OIFNV
+QkNBLTIgU0VDVVJJVFkgREFUQTEwMC4GA1UECwwnRU5USURBRCBERSBDRVJUSUZJQ0FDSU9OIERF
+IElORk9STUFDSU9OMR0wGwYDVQQKDBRTRUNVUklUWSBEQVRBIFMuQS4gMjELMAkGA1UEBhMCRUMw
+gceggcSggcGGgb5sZGFwOi8vbGRhcHNkY2EyLnNlY3VyaXR5ZGF0YS5uZXQuZWMvQ049QVVUT1JJ
+REFEIERFIENFUlRJRklDQUNJT04gU1VCQ0EtMiBTRUNVUklUWSBEQVRBLE9VPUVOVElEQUQgREUg
+Q0VSVElGSUNBQ0lPTiBERSBJTkZPUk1BQ0lPTixPPVNFQ1VSSVRZIERBVEEgUy5BLiAyLEM9RUM/
+Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlMIHgoIHdoIHahoHXaHR0cHM6Ly9wb3J0YWwt
+b3BlcmFkb3IyLnNlY3VyaXR5ZGF0YS5uZXQuZWMvZWpiY2EvcHVibGljd2ViL3dlYmRpc3QvY2Vy
+dGRpc3Q/Y21kPWNybCZpc3N1ZXI9Q049QVVUT1JJREFEIERFIENFUlRJRklDQUNJT04gU1VCQ0Et
+MiBTRUNVUklUWSBEQVRBLE9VPUVOVElEQUQgREUgQ0VSVElGSUNBQ0lPTiBERSBJTkZPUk1BQ0lP
+TixPPVNFQ1VSSVRZIERBVEEgUy5BLiAyLEM9RUMwHQYDVR0OBBYEFPPxa7fqqfYfpRruku29Qfns
+I6vdMCsGA1UdEAQkMCKADzIwMjIxMDE5MjE1NDU5WoEPMjAyMzEwMTkyMTU0NTlaMAsGA1UdDwQE
+AwIF4DAfBgorBgEEAYKmcgMFBBEMD0dFUkVOVEUgR0VORVJBTDAaBgorBgEEAYKmcgMBBAwMCjA5
+MjIyODQ4NTYwFQYKKwYBBAGCpnIDCQQHDAVRVUlUTzARBgorBgEEAYKmcgMiBAMMAS4wPAYKKwYB
+BAGCpnIDBwQuDCxDQVlFVEFOTyBDRVNUQVJJUyBTNy0xNTggWSBQQURSRSBFTElBUyBCUklUTzAZ
+BgorBgEEAYKmcgMCBAsMCUdFQU5DQVJMTzAfBgorBgEEAYKmcgMgBBEMDzAwNTAwMTAwMDAzMzYy
+ODATBgorBgEEAYKmcgMhBAUMA1BGWDAXBgorBgEEAYKmcgMMBAkMB0VDVUFET1IwFwYKKwYBBAGC
+pnIDAwQJDAdBU0VOQ0lPMD0GCisGAQQBgqZyAwoELwwtVFJBTlNQT1JURSBQRVNBRE8gSU1BTEFZ
+QSBUUkFOU1BFSU1BTEFZQSBTLkEuMB0GCisGAQQBgqZyAwsEDwwNMTc5MjY4MDc3ODAwMTARBgor
+BgEEAYKmcgMdBAMMAS4wGAYKKwYBBAGCpnIDBAQKDAhQQU5DSEFOQTAcBgorBgEEAYKmcgMIBA4M
+DDU5Mzk5MDMxMzkwNDANBgkqhkiG9w0BAQsFAAOCAgEAdJaeb4ZYVyrIhOroTtOJMb76hq7kBHkP
+lH7TKi080W+Y2xsPoQYmSG32GTI+FC4arKOnJ4nJSDQWCJWjb1pN4k/PVdKAHTKp7QZrO/ZfMLaY
+dZv7sTTP1KCAtwEMFQvZ7pBqPHveFy1JtKX0B7aIboaO4oxGvMqxrpGDSSkI6wLbcXTYxpuA55UV
+j2jY+AES7UIKL3i+N1e8t9Mtgt8CqR4K2YBx+KbVON6G/mZshiXqLAia+S2XfqVEJSsRYcJnQtlh
+oB3TDZBwPlimcgdr9wJPWid0TJFbCvuKtUsfGf11b2gAzi4BviwBeWFHtHrBN8QRQU+r9QhM1cnh
+wX8hjJ2zofxhJzJ+6zKXg94UIV2X7Q8MtfgivoWYM2o7TtENLRtLNZWuq3GiND2qYVgNI5ZYZneE
+xvvLLGpuQsycBB1vh8IS+0vZfcPrB18W3VJ/CLtfWyA0zeeWE0j0njJIGSd1AuPhKJDx7YDYnbLA
+hpZlAfyvSCV+e7ACli95cdDohrlb2+tw6m5AL6S3n6H7H9Kw4gsOR66Fw/w/ZgUQYOsvU3aOCDdy
+5yW5oAtvqmQ+XDDWr45uciUa4LX3Diq2AQBF3vGaT3XXdS9osvOXNPrmkP+pUvZTdSe1Eqel/Dpx
+mkRFDp6njjR/OJAmpLyGdJeQ5320E3kmnj77vTTXKtc=
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+00JBQ7KMYdzDExL6DeVD7WjSm28sxWd7UXPgW2VDc2AFOumDJkRrLsUXgV43SD+4yAnEcEqbbAR/
+X7WOvLaW+6HLm1H6UHS1cwWTieiV4FaBe4tXWcnu0tmiMiT/Xdzb5CfcTu74l+9gegMq7v54Qbg3
+7gAEe9oPNENqiiZgir5vPu6aZPc+nUsAZlbA+aCphCio/WBXxBHj6tT/ZuMinf+ySPnKtnlZynfH
+J/xjZjUYLRkPt2pDrw6xeKRRABtSqnd7qu7yuAmC1SqCc5/DwyKNxQpyXa+LOa67C4ofKXoZyDyn
+Euy+MKC+uBbHxWfVWZjvZ3j7QVloNj4kbLKVkQ==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature76930-Object29088"><etsi:QualifyingProperties Target="#Signature76930"><etsi:SignedProperties Id="Signature76930-SignedProperties860573"><etsi:SignedSignatureProperties><etsi:SigningTime>2023-04-18T13:13:14-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>Cu/xR+tbDDcAKvBXN4ovpY/omfE=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AUTORIDAD DE CERTIFICACION SUBCA-2 SECURITY DATA,OU=ENTIDAD DE CERTIFICACION DE INFORMACION,O=SECURITY DATA S.A. 2,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1964577713</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-320668"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></guiaRemision>

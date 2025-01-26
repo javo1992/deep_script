@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<guiaRemision id="comprobante" version="1.0.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>TRANSPEIMALAYA S.A.</razonSocial>
+    <nombreComercial>TRANSPORTE PESADO IMALAYA TRANSPEIMALAYA S.A.</nombreComercial>
+    <ruc>1792680778001</ruc>
+    <claveAcceso>1804202306179268077800120010030000000011234567814</claveAcceso>
+    <codDoc>06</codDoc>
+    <estab>001</estab>
+    <ptoEmi>003</ptoEmi>
+    <secuencial>000000001</secuencial>
+    <dirMatriz>CAYETANO CESTARIS S7158 Y PADRE ELIAS BRITO</dirMatriz>
+  </infoTributaria>
+  <infoGuiaRemision>
+    <dirEstablecimiento>CAYETANO CESTARIS S7158 Y PADRE ELIAS BRITO</dirEstablecimiento>
+    <dirPartida>LOMAS DE SARGENTILLO</dirPartida>
+    <razonSocialTransportista>TRANSPORTE PESADO IMALAYA TRANSPEIMALAYA S.A.</razonSocialTransportista>
+    <tipoIdentificacionTransportista>07</tipoIdentificacionTransportista>
+    <rucTransportista>1792680778001</rucTransportista>
+    <rise>000</rise>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <fechaIniTransporte>18/04/2023</fechaIniTransporte>
+    <fechaFinTransporte>18/04/2023</fechaFinTransporte>
+    <placa>RAB4339</placa>
+  </infoGuiaRemision>
+  <destinatarios>
+    <destinatario>
+      <identificacionDestinatario>1792680778001</identificacionDestinatario>
+      <razonSocialDestinatario>TRANSPORTE PESADO IMALAYA TRANSPEIMALAYA S.A.</razonSocialDestinatario>
+      <dirDestinatario>GUAYAQUIL</dirDestinatario>
+      <motivoTraslado>Translado de mercaderia</motivoTraslado>
+      <ruta>De LOMAS DE SARGENTILLO a GUAYAQUIL</ruta>
+      <codDocSustento>00</codDocSustento>
+      <numDocSustento>001-003-000000001</numDocSustento>
+      <numAutDocSustento>0304202301179268077800110010030000000011234567818</numAutDocSustento>
+      <fechaEmisionDocSustento>18/04/2023</fechaEmisionDocSustento>
+      <detalles>
+        <detalle>
+          <codigoInterno>001.001</codigoInterno>
+          <descripcion>Servicios prueba</descripcion>
+          <cantidad>1</cantidad>
+        </detalle>
+      </detalles>
+    </destinatario>
+  </destinatarios>
+  <infoAdicional>
+    <campoAdicional nombre="Direccion">jipiro y santa barbara</campoAdicional>
+    <campoAdicional nombre="Telefono">0987242579</campoAdicional>
+    <campoAdicional nombre="Email">javier.farinango92@gmail.com</campoAdicional>
+  </infoAdicional>
+</guiaRemision>

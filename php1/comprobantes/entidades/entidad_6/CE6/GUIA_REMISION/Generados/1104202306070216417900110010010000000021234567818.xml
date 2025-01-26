@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<guiaRemision id="comprobante" version="1.0.0">
+  <infoTributaria>
+    <ambiente>1</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>VACA PRIETO WALTER JALIL</razonSocial>
+    <nombreComercial>DISKCOVER SYSTEM</nombreComercial>
+    <ruc>0702164179001</ruc>
+    <claveAcceso>1104202306070216417900110010010000000021234567818</claveAcceso>
+    <codDoc>06</codDoc>
+    <estab>001</estab>
+    <ptoEmi>001</ptoEmi>
+    <secuencial>000000002</secuencial>
+    <dirMatriz>Desarrollo para programacion de DiskCover System</dirMatriz>
+    <contribuyenteRimpe>CONTRIBUYENTE RÉGIMEN RIMPE</contribuyenteRimpe>
+  </infoTributaria>
+  <infoGuiaRemision>
+    <dirEstablecimiento>DESARROLLO PARA PROGRAMACION DE DISKCOVER SYSTEM</dirEstablecimiento>
+    <dirPartida>ALFREDO BAQUERIZO MORENO</dirPartida>
+    <razonSocialTransportista>Javier Farinango</razonSocialTransportista>
+    <tipoIdentificacionTransportista>05</tipoIdentificacionTransportista>
+    <rucTransportista>1722214507</rucTransportista>
+    <rise>000</rise>
+    <obligadoContabilidad>NO</obligadoContabilidad>
+    <fechaIniTransporte>11/04/2023</fechaIniTransporte>
+    <fechaFinTransporte>11/04/2023</fechaFinTransporte>
+    <placa>XXX-999</placa>
+  </infoGuiaRemision>
+  <destinatarios>
+    <destinatario>
+      <identificacionDestinatario>1750188326</identificacionDestinatario>
+      <razonSocialDestinatario>Javier Farinango</razonSocialDestinatario>
+      <dirDestinatario>AMBATO</dirDestinatario>
+      <motivoTraslado>Translado de mercaderia</motivoTraslado>
+      <ruta>De ALFREDO BAQUERIZO MORENO a AMBATO</ruta>
+      <codDocSustento>00</codDocSustento>
+      <numDocSustento>001-001-000000001</numDocSustento>
+      <numAutDocSustento>1234567890</numAutDocSustento>
+      <fechaEmisionDocSustento>11/04/2023</fechaEmisionDocSustento>
+      <detalles>
+        <detalle>
+          <codigoInterno>01.01.37</codigoInterno>
+          <descripcion>Pollo  1</descripcion>
+          <cantidad>1</cantidad>
+        </detalle>
+      </detalles>
+    </destinatario>
+  </destinatarios>
+  <infoAdicional>
+    <campoAdicional nombre="Direccion">el dorado</campoAdicional>
+    <campoAdicional nombre="Email">example@example.com</campoAdicional>
+  </infoAdicional>
+</guiaRemision>

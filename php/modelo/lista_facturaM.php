@@ -56,7 +56,7 @@ class lista_facturaM
 	function DCTipoPago()
 	{
    	  $sql = "SELECT Codigo,CONCAT(Codigo,' ',Descripcion) As CTipoPago
-         FROM Tabla_Referenciales_SRI
+         FROM tabla_referenciales_sri
          WHERE Tipo_Referencia = 'FORMA DE PAGO'
          ORDER BY Codigo ";
 

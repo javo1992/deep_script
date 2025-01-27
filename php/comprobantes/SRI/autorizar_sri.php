@@ -3037,12 +3037,25 @@ class autorizacion_sri
     	 // print_r($this->JDK8." java -jar ".$comprobar_sri." 2 ".$clave_acceso." ".$url_autorizado." ".$url_No_autorizados." ".$link_autorizacion);
     	 // die();
 
-   		 $command = $this->JDK8."java -jar ".$comprobar_sri." 2 ".$clave_acceso." ".$url_autorizado." ".$url_No_autorizados." ".$link_autorizacion; 
-   		 // print_r($command);die();
+   		$comprobado = true;
+ 	    $output = '';
+ 	    $veces_envio = 1;
+ 	    while ($comprobado) {
 
-   		$output = shell_exec($command);
-   		$output = mb_convert_encoding($output, 'UTF-8', 'ISO-8859-1');
-		$output = json_decode($output,true); 	
+
+   		 	$command = $this->JDK8."java -jar ".$comprobar_sri." 2 ".$clave_acceso." ".$url_autorizado." ".$url_No_autorizados." ".$link_autorizacion; 
+   		 // print_r($command);die();
+	   		
+	   		$output = shell_exec($command);   
+	   		// print_r($output);die();		
+	   		$output = mb_convert_encoding($output, 'UTF-8', 'ISO-8859-1');
+			$output = json_decode($output,true); // <== para que la respuesta se haga un array
+			if($output[2]=='AUTORIZADO' || $veces_envio>=3)
+			{
+				$comprobado = false;
+			}	
+			$veces_envio = $veces_envio+1;
+ 	    }  		 
    		
    		return $output;
 

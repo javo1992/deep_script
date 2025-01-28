@@ -27,10 +27,10 @@ class enviar_emails
   {
     $respuesta = 1;
     $datos_smtp = $empresa;
-    $host = 'smtp.office365.com';
+    $host = 'smtp.gmail.com';
     $port =  587;
-    $pass = '19071992' ;
-    $user =  'ejfc_omoshiroi@hotmail.com';
+    $pass = 'txfk ptgq euph srgr' ;
+    $user =  'facturaciondeep.script@gmail.com';
     $secure = 'tls';
     $respuesta = true;
     if($correo_respaldo=='')
@@ -38,7 +38,7 @@ class enviar_emails
       $correo_respaldo = $user;
     }
 
-    // print_r($datos_smtp);die();
+    // print_r($to_correo);die();
 
     if(count($datos_smtp)>0)
     {
@@ -75,7 +75,7 @@ class enviar_emails
 
 
            //Server settings
-           //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+           // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
            $mail->isSMTP();                                           
            $mail->Host       = $host;
            $mail->SMTPAuth   = true;                             
@@ -136,10 +136,10 @@ class enviar_emails
              $mail->Body = $titulo_correo; // Mensaje a enviar
           }
 
-          if(!$mail->send())
-          {
-            $respuesta =-1;
-          }
+            if(!$mail->send())
+            {
+              $respuesta =-1;
+            }
         }
     }catch (Exception $e) {
       // print_r($mail);

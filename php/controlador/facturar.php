@@ -765,6 +765,16 @@ function session($parametros)
     // $correo_respaldo = $emp[0]['email'];
     $archivos = array();
     //subir archivo de file
+    $guia = 0;
+    $guia_remision = $this->modelo->guia_remision_x_factura($cliente_factura[0]['num_factura']);
+    if(count($guia_remision)>0)
+    {
+      $guia = 1;
+    }
+
+    // print_r($tipo_pago);die();
+    $cliente_factura[0]['Guia_Remision'] = $guia;
+    $cliente_factura[0]['TC'] = 'FA';
 
     // print_r($file);die();
     if($file['file_adjunto']['name']!='')

@@ -538,6 +538,7 @@ function pdf_factura()
         'pdf_fac':pdf_fac,
         'adjunto':adjunto,
     }
+    $('#myModal_email').modal('show');
      $.ajax({
         data: adjunto,
         url:   '../controlador/facturar.php?enviar_email_detalle=true',
@@ -555,9 +556,15 @@ function pdf_factura()
             }else
             {
                 Swal.fire('Email no enviado','Revise que sea un correo valido','info');
+                 $('#myModal_email').modal('hide');
             }
          
-        }
+        },
+        error: function (error) {
+          console.error('Error en numero_comprobante:', error);
+          // Puedes manejar el error aquí si es necesario
+           $('#myModal_email').modal('hide');
+        },
       });
 
   }

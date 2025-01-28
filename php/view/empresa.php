@@ -74,7 +74,7 @@
 									  	</div>
 						       	   		<div class="row">
 						       	   			<div class="col-sm-12">
-						       	   				<b>Nombre comecial</b>
+						       	   				<b>Nombre comercial</b>
 						       	   				<input type="text" name="txt_nom_comercial" id="txt_nom_comercial" class="form-control form-control-sm">
 						       	   		
 						       	   			</div>

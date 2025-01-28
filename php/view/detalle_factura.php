@@ -423,31 +423,33 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Enviar email</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
             </div>
-            <div class="modal-body m-3">
+            <div class="modal-body">
                 <div class="row"> 
                   <form enctype="multipart/form-data" id="form_img" method="post" class="col-sm-12">
                     <div class="col-sm-12">
+                        <b>Enviar a:</b>
                         <div id="emails-input" name="emails-input" placeholder="añadir email"></div>
                         <input type="hidden" name="txt_to" id="txt_to">
                         <input type="hidden" name="txt_fac_ema" id="txt_fac_ema">
                     </div>
                     <div class="col-sm-12">
-                        <textarea class="form-control" rows="3" style="resize:none" placeholder="Texto" id="txt_texto" name="txt_texto" ></textarea>
+                        <b>Mensaje</b>
+                        <textarea class="form-control" rows="3" style="resize:none" placeholder="Texto" id="txt_texto" name="txt_texto" >Envio de Factura electronica</textarea>
                     </div>                                                  
-                    <div class="col-sm-8">
+                    <div class="col-sm-12">
                         <input type="file" name="file_adjunto" id="file_adjunto" class="form-control">                       
                     </div> 
-                    <div class="col-sm-3">
-                        <label><input type="checkbox" name="cbx_factura" id="cbx_factura" checked>Enviar Factura</label>                        
+                    <div class="col-sm-12">
+                        <label><input type="checkbox" name="cbx_factura" id="cbx_factura" checked>Enviar Factura</label>                     
                     </div>  
                   </form>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" onclick="enviar_email()" >Enviar</button>
+                <button type="button" class="btn btn-primary btn-sm" onclick="enviar_email()" >Enviar</button>
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
@@ -456,9 +458,9 @@
 
 
 
-  <script src="../js/utils.js"></script>
-  <script src="../js/emails-input.js"></script>
-  <script src="../js/multiple_email.js"></script>
+  <script src="../js/js_system/utils.js"></script>
+  <script src="../js/js_system/emails-input.js"></script>
+  <script src="../js/js_system/multiple_email.js"></script>
 
 
 

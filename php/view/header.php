@@ -1,4 +1,6 @@
-<?php   @session_start(); if(!isset($_SESSION['INICIO']['ID_EMPRESA'])){ header('Location: ../../index.php'); }?>
+<?php   
+date_default_timezone_set('America/Guayaquil');
+@session_start(); if(!isset($_SESSION['INICIO']['ID_EMPRESA'])){ header('Location: ../../index.php'); }?>
 <!DOCTYPE html>
 <html lang="en">
 

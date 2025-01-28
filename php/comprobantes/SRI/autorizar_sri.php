@@ -3075,7 +3075,7 @@ class autorizacion_sri
     	$enviar_sri = dirname(__DIR__).'/SRI/firmar/JavClientSri.jar';
     	if(!file_exists($ruta_firmados.$clave_acceso.'.xml'))
     	{
-    		$respuesta = array(0=>'-1','3'=> ' XML firmado no encontrado');
+    		$respuesta = array("0"=>'-1','1'=>"",'2'=>"",'3'=> ' XML firmado no encontrado');
 	 		return $respuesta;
     	}
 		

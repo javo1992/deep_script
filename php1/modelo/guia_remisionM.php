@@ -102,7 +102,7 @@ class guia_remisionM
 	function DCTipoPago($id=false,$codigo=false,$descripcion=false)
 	{
    	  $sql = "SELECT Codigo,CONCAT(Codigo,' ',Descripcion) As CTipoPago
-         FROM Tabla_Referenciales_SRI
+         FROM tabla_referenciales_sri
          WHERE Tipo_Referencia = 'FORMA DE PAGO'";
          if($codigo)
          {

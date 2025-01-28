@@ -35,7 +35,8 @@ class autorizacion_sri
 		// $this->conn = new db();
 		$this->conn = new db();
 		$this->SRI = new linkSRI();
-		$this->JDK8 = escapeshellarg("C:\\Program Files\\Java\\jdk-1.8\\bin\\");
+		//$this->JDK8 = escapeshellarg("C:\\Program Files\\Java\\jdk-1.8\\bin\\");
+		$this->JDK8 = "";
 	}
 
 
@@ -3030,7 +3031,7 @@ class autorizacion_sri
     {
     	$entidad =$_SESSION['INICIO']['ID_EMPRESA'];
     	$empresa =$_SESSION['INICIO']['ID_EMPRESA'];
-    	$comprobar_sri = dirname(__DIR__).'/SRI/firmar/JavClientsri.jar';
+    	$comprobar_sri = dirname(__DIR__).'/SRI/firmar/JavClientSri.jar';
     	$url_autorizado=dirname(__DIR__).'/entidades/entidad_'.$entidad."/CE".$empresa.'/'.$carpeta.'/Autorizados/';
  	    $url_No_autorizados =dirname(__DIR__).'/entidades/entidad_'.$entidad."/CE".$empresa.'/'.$carpeta.'/No_autorizados/';
 
@@ -3044,7 +3045,7 @@ class autorizacion_sri
 
 
    		 	$command = $this->JDK8."java -jar ".$comprobar_sri." 2 ".$clave_acceso." ".$url_autorizado." ".$url_No_autorizados." ".$link_autorizacion; 
-   		 // print_r($command);die();
+   		  // print_r($command);die();
 	   		
 	   		$output = shell_exec($command);   
 	   		// print_r($output);die();		
@@ -3074,7 +3075,7 @@ class autorizacion_sri
     	$enviar_sri = dirname(__DIR__).'/SRI/firmar/JavClientSri.jar';
     	if(!file_exists($ruta_firmados.$clave_acceso.'.xml'))
     	{
-    		$respuesta = ' XML firmado no encontrado';
+    		$respuesta = array(0=>'-1','3'=> ' XML firmado no encontrado');
 	 		return $respuesta;
     	}
 		

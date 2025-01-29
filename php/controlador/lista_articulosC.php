@@ -438,20 +438,20 @@ function articulos($parametros)
       $datos[20]['campo'] = 'serie_pro';
       $datos[20]['dato'] = $parametros['serie'];      
       $datos[21]['campo'] = 'inventario';
-      $datos[21]['dato'] = ('1' == $parametros['Inv']) ? true : false; 
+      $datos[21]['dato'] = ('1' == $parametros['Inv']) ? 1 : 0; 
       if($parametros['tipo']=='P')
       {
         $datos[22]['campo'] = 'producto_terminado';
-        $datos[22]['dato'] = true;
+        $datos[22]['dato'] = 1;
         $datos[23]['campo'] = 'servicio';
-        $datos[23]['dato'] = false;
+        $datos[23]['dato'] = 0;
 
       }else
       {
         $datos[22]['campo'] = 'producto_terminado';
-        $datos[22]['dato'] = false;
+        $datos[22]['dato'] = 0;
         $datos[23]['campo'] = 'servicio';
-        $datos[23]['dato'] = true;
+        $datos[23]['dato'] = 1;
       }
 
       // print_r($parametros);
@@ -517,16 +517,16 @@ function articulos($parametros)
        if($parametros['tipo']=='P')
       {
         $datos[23]['campo'] = 'producto_terminado';
-        $datos[23]['dato'] = true;
+        $datos[23]['dato'] = 1;
         $datos[24]['campo'] = 'servicio';
-        $datos[24]['dato'] = false;
+        $datos[24]['dato'] = 0;
 
       }else
       {
         $datos[23]['campo'] = 'producto_terminado';
-        $datos[23]['dato'] = true;
+        $datos[23]['dato'] = 1;
         $datos[24]['campo'] = 'servicio';
-        $datos[24]['dato'] = false;
+        $datos[24]['dato'] = 0;
       }
      
       

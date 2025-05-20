@@ -2660,7 +2660,7 @@ class autorizacion_sri
 			$xml_ptoEmi = $xml->createElement( "ptoEmi",$cabecera['pto_e'] );
 			$xml_secuencial = $xml->createElement( "secuencial",$numero );
 			$xml_dirMatriz = $xml->createElement( "dirMatriz",$cabecera['direccion_principal'] );
-			$xml_contribuyenteRimpe = $xml->createElement( "contribuyenteRimpe",'CONTRIBUYENTE RÉGIMEN RIMPE' );
+			// $xml_contribuyenteRimpe = $xml->createElement( "contribuyenteRimpe",'CONTRIBUYENTE RÉGIMEN RIMPE' );
 				
 			$xml_agenteRetencion = $xml->createElement( "agenteRetencion",'1');
 				
@@ -2677,7 +2677,7 @@ class autorizacion_sri
 			$xml_infoTributaria->appendChild( $xml_dirMatriz );
 			if(count($RIMPE)>0)
 			{
-				if($RIMPE['microempresa']!='.' && $RIMPE['microempresa']!='' )
+				if($RIMPE['microempresa']!='.' && $RIMPE['microempresa']!='' && $RIMPE['@micro']=='CONTRIBUYENTE RÉGIMEN RIMPE')
 				{
 					$xml_contribuyenteRimpe = $xml->createElement( "contribuyenteRimpe",$RIMPE['microempresa']);
 					$xml_infoTributaria->appendChild( $xml_contribuyenteRimpe);
@@ -3206,6 +3206,9 @@ class autorizacion_sri
 			} 
 			if($datos[0]['Contribuyente_Especial'] == 1){ 
 			   $AgenteRetencion = 'NAC-DNCRASC20-CE-00000001';
+			}
+			if($datos[0]['regimen_general'] == 1){ 
+			   $MicroEmpresa = 'CONTRIBUYENTE RÉGIMEN GENERAL';
 			}
 
     	}

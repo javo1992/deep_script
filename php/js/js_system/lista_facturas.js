@@ -432,6 +432,9 @@ function autorizar(fac=false)
 
             imprimir(factura);
             limpiar_mesa(mesa);
+            modal_email(1);
+            enviar_email();
+
           }else if(response[0]==4)
           {            
             Swal.fire({
@@ -514,9 +517,12 @@ function pdf_factura()
 
   
 
-  function modal_email()
+  function modal_email(envio_automatico = false)
   {
-    $('#myModal_email').modal('show');
+    if(!envio_automatico)
+    {
+        $('#myModal_email').modal('show');
+    }
     $('#emails-input').html('<div class="emails emails-input"><span role="email-chip" class="email-chip"><span>'+$('#txt_email_p').val()+'</span><a href="#" class="remove">×</a></span><input type="text" role="emails-input" placeholder="añadir email ...">       </div>')
     $('#txt_to').val($('#txt_email_p').val()+',');
     $('#txt_fac_ema').val($('#txt_fac').val());

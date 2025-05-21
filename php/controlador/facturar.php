@@ -755,6 +755,7 @@ function session($parametros)
     }
     $emp = $this->modelo->datos_empresa($_SESSION['INICIO']['ID_EMPRESA']);
     $cliente_factura = $this->modelo->cliente_factura($parametros['txt_fac_ema'],$_SESSION['INICIO']['ID_EMPRESA']);
+    $lineas = $this->modelo->linea_facturas_all($parametros['txt_fac_ema'],$_SESSION['INICIO']['ID_EMPRESA']);
     $tipo_pago = $this->modelo->DCTipoPago($id=false,$cliente_factura[0]['Tipo_pago'],$descripcion=false);
     $cliente_factura[0]['tipo_pago_des'] = $tipo_pago[0]['CTipoPago'];
     //dd
@@ -770,6 +771,11 @@ function session($parametros)
     if(count($guia_remision)>0)
     {
       $guia = 1;
+    }
+
+    $total_factura = 0;
+    foreach ($lineas as $key => $value) {
+      $total_factura+= number_format($value['total'],2,'.','');
     }
 
     // print_r($tipo_pago);die();
@@ -797,7 +803,6 @@ function session($parametros)
     {
 
       $empresa = $this->modelo->datos_empresa_sucursal_usuario($_SESSION['INICIO']['ID_USUARIO'],$_SESSION['INICIO']['ID_EMPRESA']);
-      $lineas = $this->modelo->linea_facturas_all($parametros['txt_fac_ema'],$_SESSION['INICIO']['ID_EMPRESA']);
       $rimpe = $this->sri->tipo_contribuyente($empresa[0]['RUC']);
       $doc =  $this->pdf->factura_pdf($cliente_factura,$lineas,$empresa,$rimpe,false,false);
       $can = count($archivos);
@@ -811,9 +816,10 @@ function session($parametros)
          $archivos[1] = $cliente_factura[0]['Autorizacion'].'.xml';
       }
     }
-    $HTML = true;
-      // print_r('ddd');die();
-    $res =  $this->mail->enviar_email($emp,$to_correo,$cuerpo_correo,$titulo_correo,$correo_respaldo=false,$archivos,$nombre,$HTML);
+
+     $cuerpo_correo = $this->html_de_correo($cliente_factura[0]['nombre'],$cliente_factura[0]['serie'].'-'.str_repeat('0',7).$cliente_factura[0]['num_factura'],$cliente_factura[0]['fecha'], $total_factura);
+     // print_r($cuerpo_correo);die();
+    $res =  $this->mail->enviar_email($emp,$to_correo,$cuerpo_correo,$titulo_correo,$correo_respaldo=false,$archivos,$nombre,$HTML=true);
     if($res==1)
     {
       return 1;
@@ -941,6 +947,298 @@ function session($parametros)
   {
     $guia = $this->modelo->guia_remision($parametros['serie'],$parametros['factura']);
     return $guia;
+  }
+
+
+  function html_de_correo($cliente,$numFactura,$fecha,$valor)
+  {
+    $empresa = $this->modelo->datos_empresa($_SESSION['INICIO']['ID_EMPRESA']);
+    // print_r($empresa);die();
+    $logo = '';
+    $file = dirname(__DIR__).str_replace('..','', $empresa[0]['logo']);
+    if(file_exists($file))
+    {
+        $logo = "www.deep-script.com/php".str_replace('..','', $empresa[0]['logo']);
+    }
+
+    $dateTime = new DateTime($fecha);
+    setlocale(LC_TIME, 'es_ES.UTF-8', 'es_ES', 'esp');
+    $fecha_larga = strftime('%d de %B de %Y', $dateTime->getTimestamp());
+
+    $html = '
+<html>
+<head></head>
+<body>
+<div style="background-color:#ffffff;margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;height:100%;background-color:#ffffff;width:100%!important">
+<table bgcolor="#f5f7f9" border="0" cellspacing="0" style="margin:0;padding:0px;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;border-collapse:collapse;border-spacing:0;width:100%;color:#58595b">
+<tbody>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td align="center" style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<table bgcolor="#f5f7f9" border="0" cellpadding="0" cellspacing="0" style="margin:0;padding:0px;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;border-collapse:collapse;border-spacing:0;width:auto;color:#58595b">
+<tbody>
+<tr style="margin-top:2px;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+<td height="50" style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+<td style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+</tr>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td></td>
+
+<td></td>
+</tr>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+<td bgcolor="#FFFFFF" style="margin:0 auto!important;padding:10px 30px;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;border-width:0;border-style:solid;border-color:transparent;display:block!important;max-width:540px!important;clear:both!important">
+<div style="margin:0 auto;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;max-width:600px;display:block">
+<table style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;border-collapse:collapse;border-spacing:0;width:100%">
+<tbody>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td align="center" style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<table style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;border-collapse:collapse;border-spacing:0;width:100%">
+<tbody>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td style="margin:0;padding:35px 0 0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;text-align:center;color:#98a1ac">
+<div style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<p style="margin:0;padding:0;font-family:\'Avenir LT W01_85 Heavy\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:18px;line-height:1.6;margin-bottom:10px;font-weight:normal;text-transform:uppercase;color:#98a1ac">
+'.strtoupper($cliente).'</p>
+<p style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:18px;line-height:1.6;margin-bottom:10px;font-weight:normal">
+Has recibido una Factura de </p>
+</div>
+</td>
+</tr>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td style="margin:0;padding:15px 0 3px;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.0;text-align:center">
+';
+if($logo!='')
+{
+  $html.='<img alt="empresa-logo" src="'.$logo.'" style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.0;max-width:100%;border:0;height:95px;max-height:95px;width:auto" data-image-whitelisted="" class="CToWUd" data-bit="iit">';
+}
+ if($empresa[0]['Razon_Social']!=$empresa[0]['Nombre_Comercial'] )
+  {
+
+      $html.='
+       <p style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:18px;line-height:1.6;margin-bottom:10px;font-weight:normal">Razon Social:</p>
+      <p style="margin:0;padding:0;font-family:\'Avenir LT W01_85 Heavy\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:18px;line-height:1.6;margin-bottom:10px;font-weight:normal;text-transform:uppercase;color:#98a1ac">'.strtoupper($empresa[0]['Razon_Social']).'</p>
+       <p style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:18px;line-height:1.6;margin-bottom:10px;font-weight:normal">Nombre Comercial:</p>
+    <p style="margin:0;padding:0;font-family:\'Avenir LT W01_85 Heavy\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:18px;line-height:1.6;margin-bottom:10px;font-weight:normal;text-transform:uppercase;color:#98a1ac">'.strtoupper($empresa[0]['Nombre_Comercial']).'</p>';
+  }else
+  {
+    $html.='
+    <p style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:18px;line-height:1.6;margin-bottom:10px;font-weight:normal">Razon Social:</p>
+    <p style="margin:0;padding:0;font-family:\'Avenir LT W01_85 Heavy\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:18px;line-height:1.6;margin-bottom:10px;font-weight:normal;text-transform:uppercase;color:#98a1ac">
+    '.strtoupper($empresa[0]['Razon_Social']).'</p>';
+  }
+$html.='
+</td>
+</tr>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td height="25" style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+</tr>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td height="0" style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;border-bottom:1px solid #d2d9dd;height:0">
+</td>
+</tr>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td height="25" style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+</tr>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;text-align:center">
+<div style="margin:0;padding:0;font-family:\'Avenir LT W01_65 Medium\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:2.1">
+<b>FACTURA '.$numFactura.'</b></div>
+</td>
+</tr>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td height="25" style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+</tr>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+<td bgcolor="#e4e8ea" height="" valign="middle" style="border:0;margin:0 auto!important;padding:10px 30px;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;border-width:0;border-style:solid;border-color:transparent;display:block!important;max-width:540px!important;clear:both!important">
+<div style="margin:0 auto;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;max-width:600px;display:block">
+<div style="margin:0;padding:0;font-family:\'Avenir LT W01_65 Medium\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;text-align:center;border:0">'.$fecha_larga.'</div>
+</div>
+</td>
+<td style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+</tr>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+<td bgcolor="#FFFFFF" style="margin:0 auto!important;padding:10px 30px;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;border-width:0;border-style:solid;border-color:transparent;display:block!important;max-width:540px!important;clear:both!important">
+<div style="margin:0 auto;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;max-width:600px;display:block">
+<table style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;border-collapse:collapse;border-spacing:0;width:100%">
+<tbody>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td height="35" style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+</tr>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;text-align:center">
+<div style="margin:0;padding:0;font-family:\'Avenir LT W01_65 Medium\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:2.1">
+Por el valor de: </div>
+<div style="margin:0;padding:0;font-family:\'Avenir LT W01_85 Heavy\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:48px;line-height:1.0;text-align:center"> $'.$valor.'  </div>
+</td>
+</tr>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td height="55" style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+</tr>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+<td bgcolor="#FFFFFF">
+<div style="margin:0 auto;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;max-width:600px;display:block">
+<table border="0" cellpadding="0" cellspacing="0" style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;border-collapse:collapse;border-spacing:0;width:100%">
+<tbody>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td align="center" style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;text-align:center">
+
+<table style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;border-collapse:collapse;border-spacing:0;width:100%">
+<tbody>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td align="center" style="margin:0;padding:10px 0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;text-align:center">
+<p style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;margin-bottom:10px;font-weight:normal;text-align:center">
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+</tr>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+<td bgcolor="#FFFFFF" style="margin:0 auto!important;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;border-right:none;border-bottom:none;border-left:none;text-align:center;border-width:0;border-style:solid;border-color:transparent;border-top:1px solid #d2d9dd!important;display:block!important;max-width:540px!important;clear:both!important">
+<div style="margin:0 auto;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;max-width:600px;display:block">
+<table border="0" cellpadding="0" cellspacing="0" style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;border-collapse:collapse;border-spacing:0;width:100%">
+<tbody>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td align="center" style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;text-align:center">
+<table style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;border-collapse:collapse;border-spacing:0;width:100%">
+<tbody>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td align="center" style="margin:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;text-align:center">
+<p style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;font-weight:normal;text-align:center"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+</tr>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+<td bgcolor="#DCE4E4" style="margin:0 auto!important;padding:20px 30px!important;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;border-right:none;border-bottom:none;border-left:none;text-align:center;border-width:0;border-style:solid;border-color:transparent;border-top:1px solid #d2d9dd!important;display:block!important;max-width:540px!important;clear:both!important">
+<div style="margin:0 auto;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;max-width:600px;display:block">
+<table border="0" cellpadding="0" cellspacing="0" style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;border-collapse:collapse;border-spacing:0;width:100%">
+<tbody>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td align="center" style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;text-align:center">
+
+<div style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;text-align:center"> <p style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.6;margin-bottom:10px;font-weight:normal;color:#6f7f8c">
+  ---------    Generado por deep-script. Visitanos en 
+  <a href="https://deep-script.com/" style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;color:#6f7f8c" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://contifico.com/&amp;source=gmail&amp;ust=1747926865599000&amp;usg=AOvVaw2mugY6TqRR3VWiFN4H40Br">deep-script.com </a>    ---------
+  </p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+</tr>
+</tbody>
+</table>
+<table bgcolor="#f5f7f9" style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;border-collapse:collapse;border-spacing:0;width:auto;clear:both!important">
+<tbody>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+<td style="margin:0 auto!important;padding:10px 30px;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;border-width:0;border-style:solid;border-color:transparent;display:block!important;max-width:540px!important;clear:both!important">
+<div style="margin:0 auto;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;max-width:600px;display:block">
+<table style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;border-collapse:collapse;border-spacing:0;width:100%">
+<tbody>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td align="center" style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<table style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6;border-collapse:collapse;border-spacing:0;width:100%">
+<tbody>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td align="center" style="margin:0;padding:10px 0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+
+</td>
+</tr>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td align="center" style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+</tr>
+<tr style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+<td height="10" style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td style="margin:0;padding:0;font-family:\'Avenir LT W01_35 Light\',\'Helvetica Neue\',\'Helvetica\',Helvetica,Arial,sans-serif;font-size:100%;line-height:1.6">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>';
+
+  
+          return $html;
   }
 
   

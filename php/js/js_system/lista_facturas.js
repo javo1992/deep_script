@@ -428,12 +428,17 @@ function autorizar(fac=false)
               text: 'Factura enviada al sri',
               icon: 'success',
               allowOutsideClick: false
-            }).then(() => location.reload());
+            }).then(function() 
+                {
+                    modal_email(1);
+                    enviar_email();
+                    location.reload()
+                }
+            );
 
             imprimir(factura);
             limpiar_mesa(mesa);
-            modal_email(1);
-            enviar_email();
+           
 
           }else if(response[0]==4)
           {            
@@ -442,7 +447,12 @@ function autorizar(fac=false)
               text: '',
               icon: 'success',
               allowOutsideClick: false
-            }).then(() => location.reload());
+            }).then(function(){
+                    modal_email(1);
+                    enviar_email();
+                    location.reload()
+                }
+            );
 
             imprimir(factura);
             limpiar_mesa(mesa);

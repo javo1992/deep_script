@@ -50,12 +50,38 @@ class loginM
     }
 
 
-    function notificaciones_usuario($id_empresa,$usuario)
+    function notificaciones_usuario($estado =false,$leido=0,$id=false)
     {
-    	$sql = "SELECT * FROM
-    	(SELECT * FROM notificaciones WHERE empresa = '".$id_empresa."' AND usuario = '".$usuario."' and leido = '0'
-    	UNION
-    	SELECT * FROM notificaciones WHERE empresa = '".$id_empresa."' AND usuario is NULL AND leido = 0) AS I ORDER BY I.id_noti DESC "; 
+    	$id_empresa = $_SESSION['INICIO']['ID_EMPRESA'];
+    	$usuario = $_SESSION['INICIO']['ID_USUARIO'];
+
+    	$sql = "SELECT * FROM notificaciones 
+    			WHERE empresa = '".$id_empresa."' 
+    			AND usuario = '".$usuario."' ";
+    			if($estado)
+    			{
+    				$sql.=" AND leido = '".$leido."'";
+    			} 
+    			if($id)
+    			{
+    				$sql.=" AND id_noti='".$id."'";
+    			}
+
+    	// print_r($sql);die();
+    	$result = $this->db->datos($sql,$id_empresa);
+        return $result;
+
+    }
+
+
+    function notificaciones_leida($id)
+    {
+    	$id_empresa = $_SESSION['INICIO']['ID_EMPRESA'];
+    	$sql = "UPDATE  notificaciones
+    			SET leido = 1 
+    			WHERE id_noti='".$id."'"; 
+
+    	// print_r($sql);die();
     	$result = $this->db->datos($sql,$id_empresa);
         return $result;
 

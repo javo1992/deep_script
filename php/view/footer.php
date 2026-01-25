@@ -48,16 +48,38 @@
 </html>
 
 <div class="modal" id="alertas" data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content modal-dialog-centered">  
-        <!-- Modal body -->
-        <div class="modal-body text-center">
-          <img src="../img/facturando.gif" id="img_alerta" style="width: 30%;">
-          <label id="tipo_alerta">Facturando..</label>
-        </div>  
-      </div>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-dialog-centered">  
+      <!-- Modal body -->
+      <div class="modal-body text-center">
+        <img src="../img/facturando.gif" id="img_alerta" style="width: 30%;">
+        <label id="tipo_alerta">Facturando..</label>
+      </div>  
     </div>
   </div>
+</div>
+
+<div class="modal" id="notificacion">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">  
+      <div class="modal-header">
+        <h5 class="modal-title" id="lbl_titulo"></h5>
+      </div> 
+      <!-- Modal body -->
+      <div class="modal-body">
+          <div class="row">
+            <input type="hidden" name="txt_id_noti" id="txt_id_noti">
+            <div class="col-sm-12" id="lbl_cuerpo">
+            </div>          
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" onclick="notificado_leido()">Cerrar</button>
+      </div>  
+    </div>
+  </div>
+</div>
+
 <div class="modal fade" id="myModal_sri_error" role="dialog" data-keyboard="false" data-backdrop="static">
   <div class="modal-dialog">
     <div class="modal-content">

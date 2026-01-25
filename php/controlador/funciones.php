@@ -17,8 +17,20 @@ if(isset($_GET['login']))
 }
 if(isset($_GET['notificaciones']))
 {
+    // $parametros = $_POST['parametros'];
+    echo json_encode($controlador->notificaciones());
+}
+
+if(isset($_GET['notificado_leido']))
+{
     $parametros = $_POST['parametros'];
-    echo json_encode($controlador->notificaciones($parametros));
+    echo json_encode($controlador->notificado_leido($parametros));
+}
+
+if(isset($_GET['ver_notificado']))
+{
+    $parametros = $_POST['parametros'];
+    echo json_encode($controlador->ver_notificado($parametros));
 }
 
 class funcionesC
@@ -41,40 +53,53 @@ class funcionesC
       return array('res'=>$result,'datos'=>'');
     }
 
-  function notificaciones($parametros)
+  function notificaciones()
   {
-    $usuario = $this->modelo->notificaciones_usuario($parametros['empresa'],$parametros['usuario']);
+    $usuario = $this->modelo->notificaciones_usuario(1,0);
+    $noti_all = $this->modelo->notificaciones_usuario();
 
-    $noti = '<h6 class="dropdown-header">
-                Centro de alertas
-            </h6>';
+
+    $noti = '';
     $num = 0;
-    foreach ($usuario as $key => $value) {
+    // print_r($usuario);die();
+    foreach ($noti_all as $key => $value) {
     if(is_object($value['fecha']))
     {
         $value['fecha'] = $value['fecha']->format('Y-m-d');
     }
-      $noti.= '
-            <a class="dropdown-item d-flex align-items-center" href="#">
-                <div class="mr-3">
-                    <div class="icon-circle bg-primary">
-                        <i class="fas fa-file-alt text-white"></i>
-                    </div>
+        $noti.= '
+        <a class="dropdown-item preview-item" onclick="ver_notificado('.$value['id_noti'].')">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
                 </div>
-                <div>
-                    <div class="small text-gray-500">'.$value['fecha'].'</div>
-                    <span class="font-weight-bold">'.$value['titulo'].'</span>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">'.$value['titulo'].'</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    '.$value['fecha'].'
+                  </p>
                 </div>
-            </a>';
+              </a>';
             $num=$num+1;
     }
 
-    $datos = array('noti'=>$noti,'num'=>$num);
+    $datos = array('noti'=>$noti,'num'=>$num,'data'=>$usuario);
     return $datos;
 
+  }
+
+  function notificado_leido($parametros)
+  {
+     return $this->modelo->notificaciones_leida($parametros['id']);
   } 
 
-
+  function ver_notificado($parametros)
+  {
+     $data =  $this->modelo->notificaciones_usuario(0,0,$parametros['id']);
+     // print_r($data);die();
+     return $data;
+  }
 
 }
 

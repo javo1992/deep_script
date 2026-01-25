@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
 
-	// disparar_noti();
+	disparar_noti();
 	
 });
 
@@ -55,26 +55,89 @@ $(document).ready(function () {
 
 function disparar_noti()
 {
-	// setInterval(notificaciones,10000);
-	// notificaciones()
+	setInterval(notificaciones,1000);
+	notificaciones()
 }
 
 function notificaciones()
 {
-	var parametros = 
-	{
-		'empresa':localStorage.getItem('ID_EMPRESA'),
-		'usuario':localStorage.getItem('ID_USUARIO'),
-	}
+	// var parametros = 
+	// {
+	// 	'empresa':localStorage.getItem('ID_EMPRESA'),
+	// 	'usuario':localStorage.getItem('ID_USUARIO'),
+	// }
 
     $.ajax({
-        data:  {parametros:parametros},
-        url:    url_link+'funciones.php?notificaciones=true',           
+        // data:  {parametros:parametros},
+        url:   '../controlador/funciones.php?notificaciones=true',           
         type:  'post',
         dataType: 'json',
         success:  function (response) { 
+
+            // console.log(response)
             $('#pnl_aletas').html(response.noti); 
-            $('#num_noti').text(response.num); 
+            if(response.data.length>0)
+            {
+                $('#num_noti').removeClass("d-none")
+                if(response.data.length>0)
+                {
+                    $('#notificacion').modal('show');
+                    $('#lbl_titulo').text(response.data[0].titulo);
+                    $('#lbl_cuerpo').text(response.data[0].cuerpo);
+                    $('#txt_id_noti').val(response.data[0].id_noti);
+                }
+                // $('#num_noti').text(response.num); 
+            }else{
+                $('#num_noti').addClass("d-none")
+            }
+        }
+      });
+
+}
+
+function notificado_leido()
+{
+    var parametros = 
+    {
+        'id':$('#txt_id_noti').val(),
+    }
+    $.ajax({
+        data:  {parametros:parametros},
+        url:    '../controlador/funciones.php?notificado_leido=true',           
+        type:  'post',
+        dataType: 'json',
+        success:  function (response) { 
+            if(response){
+                $('#notificacion').modal('hide');
+            }
+        }
+      });
+
+}
+
+
+function ver_notificado(id)
+{
+    var parametros = 
+    {
+        'id':id,
+    }
+    $.ajax({
+        data:  {parametros:parametros},
+        url:    '../controlador/funciones.php?ver_notificado=true',           
+        type:  'post',
+        dataType: 'json',
+        success:  function (response) { 
+            console.log(response)
+            if(response.length>0)
+            {
+
+                $('#notificacion').modal('show');
+                $('#lbl_titulo').text(response[0].titulo);
+                $('#lbl_cuerpo').text(response[0].cuerpo);
+                $('#txt_id_noti').val(response[0].id_noti);
+            }
+            
         }
       });
 

@@ -55,7 +55,7 @@ $(document).ready(function () {
 
 function disparar_noti()
 {
-	setInterval(notificaciones,1000);
+	setInterval(notificaciones,3000);
 	notificaciones()
 }
 
@@ -108,7 +108,7 @@ function notificado_leido()
         dataType: 'json',
         success:  function (response) { 
             if(response){
-                $('#notificacion').modal('hide');
+                location.reload();
             }
         }
       });

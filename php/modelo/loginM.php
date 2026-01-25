@@ -78,7 +78,7 @@ class loginM
     {
     	$id_empresa = $_SESSION['INICIO']['ID_EMPRESA'];
     	$sql = "UPDATE  notificaciones
-    			SET leido = 1 
+    			SET leido = '1' 
     			WHERE id_noti='".$id."'"; 
 
     	// print_r($sql);die();

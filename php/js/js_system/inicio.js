@@ -272,9 +272,9 @@ function saldo_empresa()
             if(response.bloquear==1)
             {
                 Swal.fire({
-                  title: "Tu saldo se ha terminado!",
+                  title: "Tu licencia o saldo de facturacion a caducado!",
                   text: "contactate con el administrador del sistema",
-                  imageUrl: "https://unsplash.it/400/200",
+                  imageUrl: "../img/sistema/expirado.png",
                   imageWidth: 400,
                   imageHeight: 200,
                   imageAlt: "Custom image",
